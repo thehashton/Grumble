@@ -1,0 +1,30 @@
+{
+  "name": "eat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Find",
+    "a",
+    "place",
+    "to",
+    "eat",
+    "near",
+    "you"
+  ],
+  "author": "Harry Ghazni",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.3.1",
+    "apollo-server-express": "^2.3.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "opn": "^5.4.0"
+  }
+}

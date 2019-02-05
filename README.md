@@ -4,5 +4,5 @@ By Harry Ghazni
 Run the following to start the project
 
 ```
-node server.js
+npm run server
 ```

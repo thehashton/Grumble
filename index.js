@@ -3,6 +3,7 @@ import expressGraphQL from "express-graphql";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
+import app from express();
 const PORT = process.env.PORT || "4000";
 const db = "mongodb://harry:Sophie777@ds052968.mlab.com:52968/lunch";
 import schema from "./graphql/";

@@ -4,5 +4,11 @@ By Harry Ghazni
 Run the following to start the project
 
 ```
-npm run server
+cb run
+```
+
+To build it use
+
+```
+cb build
 ```

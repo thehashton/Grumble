@@ -4,7 +4,7 @@ By Harry Ghazni
 Run the following to start the project
 
 ```
-cb run
+cb start
 ```
 
 To run Storybook

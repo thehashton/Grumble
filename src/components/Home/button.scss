@@ -1,7 +1,23 @@
-// Home button components
-.buttons {}
-
 // General button style
-button {
+.button {
+    background-color:rgb(102, 104, 231);
     padding: 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        background-color:rgb(56, 58, 161);
+    }
+
+    &:active {
+        position: relative;
+        left: 3px;
+        top: 3px;
+    }
 }

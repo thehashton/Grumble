@@ -12,11 +12,13 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"] 
   },
   devServer: {
-    contentBase: path.join(__dirname,'src')
+    contentBase: path.join(__dirname,'src'),
+    watchContentBase: true,
+    historyApiFallback: true,
   },
   output: { 
     path: path.join(__dirname,'dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
   }, 
   mode: process.env.NODE_ENV || 'development',
   module: { 

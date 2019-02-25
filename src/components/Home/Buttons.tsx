@@ -1,35 +1,28 @@
 import React, { Component } from 'react'
 import './button.scss';
+import { Route, Link, BrowserRouter as Router, Switch, BrowserRouter } from 'react-router-dom';
+import FoodTypes from '../../RootComponents/FoodTypes';
+import Random from '../../RootComponents/Random';
+import TravelTo from '../../RootComponents/TravelTo';
+import Hero from '../../components/Home/Hero';
 export default class Buttons extends Component {
-
-  // Add active class to buttonsx
-  activeButton() { 
-    // Get all buttons with class="btn" inside the container
-    var btns = document.getElementsByClassName("button");
-
-    // Loop through the buttons and add the active class to the current/clicked button
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(this: any) {
-        var current = document.getElementsByClassName("active");
-
-        // If there's no active class
-        if (current.length > 0) {
-          current[0].className = current[0].className.replace(" active", "");
-        }
-
-        // Add the active class to the current/clicked button
-        this.className += " active";
-      });
-    } 
-  }
 
   render() {
     return (
+      <BrowserRouter>
       <div className="buttons">
-        <button className="button food-types" onClick={this.activeButton}>food types</button>
-        <button className="button random-choice">Random</button>
-        <button className="button location">different location</button>
+        <Link to="/food-types"><button className="button food-types">food types</button></Link>
+        <Link to="/Random"><button className="button random-choice">Random</button></Link>
+        <Link to="/travel-to"><button className="button travel-to">Travel to</button></Link>
+
+        <Switch>
+          <Route exact path="/" component={Hero} />
+          <Route exact path="/food-types" component={FoodTypes} />
+          <Route exact path="/random" component={Random} />
+          <Route exact path="/travel-to" component={TravelTo} />
+        </Switch>
       </div>
+      </BrowserRouter>
     )
 
   }

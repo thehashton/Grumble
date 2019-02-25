@@ -1,9 +1,9 @@
 import React from 'react'
-import Buttons from '../../components/Home/Buttons';
 import './home.scss';
+import Buttons from '../../components/Home/Buttons';
+import HeroLogo from '../../components/Home/HeroLogo';
 
 export const Home: React.SFC = () => { 
-
   var msgArr = new Array();
 
   msgArr[0] = "Hungry?";
@@ -13,11 +13,9 @@ export const Home: React.SFC = () => {
   const message = msgArr[Math.floor(Math.random()*msgArr.length)];
 
   return (
-    <div className="home-wrapper">
-    <img src="../assets/images/noodles.png" alt="Place to Eat" className="logo"/>
-      <h1 id="hero-title">{message}</h1>
-      <p>Let's find you a place to eat</p>
-      <Buttons />
+    <div>
+    <HeroLogo />
+    <Buttons />
     </div>
   )
 };

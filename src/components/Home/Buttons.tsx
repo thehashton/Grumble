@@ -4,7 +4,6 @@ import { Route, Link, BrowserRouter as Router, Switch, BrowserRouter } from 'rea
 import FoodTypes from '../../RootComponents/FoodTypes';
 import Random from '../../RootComponents/Random';
 import TravelTo from '../../RootComponents/TravelTo';
-import Hero from '../../components/Home/Hero';
 export default class Buttons extends Component {
 
   render() {
@@ -16,7 +15,6 @@ export default class Buttons extends Component {
         <Link to="/travel-to"><button className="button travel-to">Travel to</button></Link>
 
         <Switch>
-          <Route exact path="/" component={Hero} />
           <Route exact path="/food-types" component={FoodTypes} />
           <Route exact path="/random" component={Random} />
           <Route exact path="/travel-to" component={TravelTo} />

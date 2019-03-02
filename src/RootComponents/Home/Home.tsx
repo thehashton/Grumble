@@ -2,6 +2,7 @@ import React from 'react'
 import './home.scss';
 import Buttons from '../../components/Home/Buttons';
 import HeroLogo from '../../components/Home/HeroLogo';
+import Hero from '../../components/Home/Hero';
 
 export const Home: React.SFC = () => { 
   var msgArr = new Array();
@@ -15,6 +16,7 @@ export const Home: React.SFC = () => {
   return (
     <div>
     <HeroLogo />
+    <Hero />
     <Buttons />
     </div>
   )

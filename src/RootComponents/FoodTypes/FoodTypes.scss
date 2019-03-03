@@ -1,11 +1,16 @@
 .food-type-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     list-style-type: none;
+    padding: 0;
+
+     @media (min-width: 770px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .food-type-item {
-    padding: 50px 25px;
+    padding: 40px 5px;
     border: 1px dashed rgba(47, 144, 189, 0.411);
 
     &:hover {

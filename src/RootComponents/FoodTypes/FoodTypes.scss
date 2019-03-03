@@ -1,0 +1,16 @@
+.food-type-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+.food-type-item {
+    padding: 50px 25px;
+    border: 1px dashed rgba(47, 144, 189, 0.411);
+
+    &:hover {
+        background-color: rgba(47, 144, 189, 0.411);
+        border: 1px dashed #fff;
+        cursor: pointer;
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import './home.scss';
 import Buttons from '../../components/Home/Buttons';
 import HeroLogo from '../../components/Home/HeroLogo';
-import Hero from '../../components/Home/Hero';
+import HeroTitle from '../../components/Home/HeroTitle';
 
 export const Home: React.SFC = () => { 
   var msgArr = new Array();
@@ -16,7 +16,7 @@ export const Home: React.SFC = () => {
   return (
     <div>
       <HeroLogo />
-      <Hero />
+      <HeroTitle />
       <Buttons />
     </div>
   )

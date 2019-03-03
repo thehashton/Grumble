@@ -1,7 +1,7 @@
 import React from 'react'
 import './button.scss';
 
-export const Hero: React.SFC = () => { 
+export const HeroTitle: React.SFC = () => { 
 
   var msgArr = new Array();
 
@@ -19,4 +19,4 @@ export const Hero: React.SFC = () => {
   )
 };
 
-export default Hero;
+export default HeroTitle;

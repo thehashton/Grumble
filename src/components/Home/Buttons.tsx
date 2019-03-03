@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
 import './button.scss';
-import { Route, Link, BrowserRouter as Router, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Link, Switch, BrowserRouter } from 'react-router-dom';
+import Button from './Button';
 import FoodTypes from '../../RootComponents/FoodTypes';
 import Random from '../../RootComponents/Random';
 import TravelTo from '../../RootComponents/TravelTo';
 export default class Buttons extends Component {
 
   render() {
+
     return (
       <BrowserRouter>
       <div className="buttons">
-        <Link to="/food-types"><button className="button food-types">food types</button></Link>
-        <Link to="/Random"><button className="button random-choice">Random</button></Link>
-        <Link to="/travel-to"><button className="button travel-to">Travel to</button></Link>
+        <Link to="/food-types"><Button className={"button food-types"} onlick={} buttonText="Food Types"></Button></Link>
+        <Link to="/Random"><Button className={"button random-choice"} onlick={} buttonText="Random"></Button></Link>
+        <Link to="/travel-to"><Button className={"button travel-to"} onlick={} buttonText="Travel To"></Button></Link>
 
         <Switch>
           <Route exact path="/food-types" component={FoodTypes} />

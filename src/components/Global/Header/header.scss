@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #383aa1;
+    box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.15);
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.logo {
+    h1 {
+        margin-bottom: 0;
+
+        @media (min-width: 768px) {
+            margin: 20px;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu__item {
+    padding-right: 20px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: white;
+}

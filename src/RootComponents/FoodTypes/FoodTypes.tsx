@@ -23,7 +23,7 @@ export const FoodTypes: React.SFC = () => {
       />
     </div>
   )
-        
+
 };
 
 export default FoodTypes;

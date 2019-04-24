@@ -4,7 +4,7 @@ import Buttons from '../../components/Home/Buttons';
 import HeroLogo from '../../components/Home/HeroLogo';
 import HeroTitle from '../../components/Home/HeroTitle';
 
-export const Home: React.SFC = () => { 
+export const Home: React.SFC = () => {
   var msgArr = new Array();
 
   msgArr[0] = "Hungry?";

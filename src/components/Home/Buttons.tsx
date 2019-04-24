@@ -16,9 +16,9 @@ export default class Buttons extends Component {
     return (
       <BrowserRouter>
       <div className="buttons">
-        <Link to="/food-types"><Button className={"button food-types"} onlick={this.onClick} buttonText="Food Types"></Button></Link>
-        <Link to="/Random"><Button className={"button random-choice"} onlick={this.onClick} buttonText="Random"></Button></Link>
-        <Link to="/travel-to"><Button className={"button travel-to"} onlick={this.onClick} buttonText="Travel To"></Button></Link>
+        <Link to="/food-types"><Button className={"food-types"} onlick={this.onClick} buttonText="Food Types"></Button></Link>
+        <Link to="/Random"><Button className={"random-choice"} onlick={this.onClick} buttonText="Random"></Button></Link>
+        <Link to="/travel-to"><Button className={"travel-to"} onlick={this.onClick} buttonText="Travel To"></Button></Link>
 
         <Switch>
           <Route exact path="/food-types" component={FoodTypes} />

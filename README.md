@@ -1,5 +1,4 @@
 # Eat
-###  Helping users find places to eat near them.
 By Harry Ghazni
 ```
     (\
@@ -11,7 +10,7 @@ By Harry Ghazni
    :.          \\,----,         ,;
     `.`--.___   (    /  ___.--','
       `.     ``-----'-''     ,'
-         -.               ,-
+Helping users find places to eat near them.
             `-._______.-'
 ```
 

@@ -10,7 +10,6 @@ class App extends Component {
     const client = new ApolloClient({
       uri: "https://localhost:4000/graphql"
     });
-    console.log(client);
 
     return (
       <div className="App">

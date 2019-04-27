@@ -1,13 +1,9 @@
 import React from 'react'
 import './random.scss';
-import Modal from '../../components/Global/Modal'
 
 export const Random: React.SFC = () => {
 
   return (
-    <Modal
-      class={'random-modal'}
-      content={
         <div className="random">
           <h1>Random</h1>
           <div className="choice">
@@ -19,8 +15,6 @@ export const Random: React.SFC = () => {
             </div>
           </div>
         </div>
-      }
-    />
   )
 };
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import './dialog.scss';
 
 type DialogType = {
   onClose: any;
@@ -18,7 +19,7 @@ const Dialog: React.SFC<any> = props => {
   }
 
   return (
-    <div>
+    <div className="modal">
       {dialog}
     </div>
   )

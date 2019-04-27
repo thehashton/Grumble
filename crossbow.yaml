@@ -3,7 +3,11 @@ tasks:
     build:
       adaptor: sh
       command: 'npm run build'
-      
+
     start:
       adaptor: sh
       command: 'npm run start'
+
+    graphql:
+      adaptor: sh
+      command: 'npm run server'

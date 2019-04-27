@@ -3,8 +3,8 @@ import expressGraphQL from "express-graphql";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
+import opn from "open";
 const app = express();
-const opn = require('opn');
 const PORT = process.env.PORT || "4000";
 const db = "mongodb://harry:Sophie777@ds052968.mlab.com:52968/lunch";
 import schema from "./schema/index";
@@ -31,8 +31,8 @@ mongoose
       graphiql: true
     })
   );
-  
-  app.listen(PORT, () => 
+
+  app.listen(PORT, () =>
     console.log(`Server running on port localhost:${PORT}/graphql`),
     opn('http://localhost:4000/graphql')
   );

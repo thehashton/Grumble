@@ -1,7 +1,7 @@
 # Eat app Readme
 ###  Helping users find places to eat near them.
 By Harry Ghazni
-
+```
     (\
      \ \
  __    \/ ___,.-------..__        __
@@ -13,6 +13,7 @@ By Harry Ghazni
       `.     ``-----'-''     ,'
          -.               ,-
             `-._______.-'
+```
 
 
 Run the following to start the project

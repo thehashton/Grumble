@@ -1,32 +1,37 @@
 import React, { Component } from 'react'
 import './button.scss';
-import { Route, Link, Switch, BrowserRouter } from 'react-router-dom';
 import Button from './Button';
 import FoodTypes from '../../RootComponents/FoodTypes';
 import Random from '../../RootComponents/Random';
 import TravelTo from '../../RootComponents/TravelTo';
+import Dialog from '../../components/Global/Dialog';
 export default class Buttons extends Component {
 
-  onClick() {
-    console.log('empty on click');
+  state = {
+    foodTypesOpen: false,
+    randomChoiceOpen: false,
+    travelToOpen: false
   }
 
   render() {
-
     return (
-      <BrowserRouter>
-      <div className="buttons">
-        <Link to="/food-types"><Button className={"food-types"} onlick={this.onClick} buttonText="Food Types"></Button></Link>
-        <Link to="/Random"><Button className={"random-choice"} onlick={this.onClick} buttonText="Random"></Button></Link>
-        <Link to="/travel-to"><Button className={"travel-to"} onlick={this.onClick} buttonText="Travel To"></Button></Link>
+      <div>
+        <Button onClick={() => this.setState({ foodTypesOpen: true, randomChoiceOpen: false, travelToOpen: false})} className={"food-types"} buttonText="Food Types"/>
+        <Button onClick={() => this.setState({ randomChoiceOpen: true, foodTypesOpen: false, travelToOpen: false})} className={"random-choice"} buttonText="Random"/>
+        <Button onClick={() => this.setState({ travelToOpen: true, randomChoiceOpen: false, foodTypesOpen: false})} className={"travel-to"} buttonText="Travel To"/>
 
-        <Switch>
-          <Route exact path="/food-types" component={FoodTypes} />
-          <Route exact path="/random" component={Random} />
-          <Route exact path="/travel-to" component={TravelTo} />
-        </Switch>
+        <Dialog isOpen={this.state.foodTypesOpen} onClose={() => this.setState({ foodTypesOpen: false})}>
+          <FoodTypes />
+        </Dialog>
+
+        <Dialog isOpen={this.state.randomChoiceOpen} onClose={() => this.setState({ randomChoiceOpen: false})}>
+          <Random />
+        </Dialog>
+
+        <Dialog isOpen={this.state.travelToOpen} onClose={() => this.setState({ travelToOpen: false})}>
+          <TravelTo />
+        </Dialog>
       </div>
-      </BrowserRouter>
     )
 
   }

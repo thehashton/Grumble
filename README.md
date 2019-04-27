@@ -1,4 +1,4 @@
-# Eat app Readme
+# Eat
 ###  Helping users find places to eat near them.
 By Harry Ghazni
 ```

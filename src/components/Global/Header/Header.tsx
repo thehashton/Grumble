@@ -9,10 +9,10 @@ const Header = (props: any) => {
             </div>
 
             <ul className={"menu"}>
-                <li className={"menu__item"}><a href={"#"} className={"menu__link"}>About</a></li>
-                <li className={"menu__item"}><a href={"#"} className={"menu__link"}>Account</a></li>
-                <li className={"menu__item"}><a href={"#"} className={"menu__link"}>FAQ</a></li>
-                <li className={"menu__item"}><a href={"#"} className={"menu__link"}>Contact</a></li>
+                <li className={"menu__item"}><a href={"#about"} className={"menu__link"}>About</a></li>
+                <li className={"menu__item"}><a href={"#account"} className={"menu__link"}>Account</a></li>
+                <li className={"menu__item"}><a href={"#faq"} className={"menu__link"}>FAQ</a></li>
+                <li className={"menu__item"}><a href={"#contact"} className={"menu__link"}>Contact</a></li>
             </ul>
         </div>
    )}

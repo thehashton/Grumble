@@ -17,16 +17,23 @@
 .logo {
     h1 {
         margin-bottom: 0;
+        font-size: 42px;
+
+        &:hover {
+            text-shadow: 6px 6px 2px #23243a;
+        }
 
         @media (min-width: 768px) {
-            margin: 20px;
+            margin: 10px;
         }
     }
 }
 
 .menu {
     display: flex;
+    align-items: center;
     list-style-type: none;
+    font-size: 0;
 }
 
 .menu__item {
@@ -34,6 +41,16 @@
 }
 
 .menu__link {
+    display: flex;
     text-decoration: none;
     color: white;
+    font-size: 22px;
+    height: 100%;
+    padding: 22px;
+
+
+    &:hover {
+        background-color: darken(#383aa1, 20%);
+        box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
+    }
 }

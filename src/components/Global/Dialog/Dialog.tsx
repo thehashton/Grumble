@@ -8,7 +8,7 @@ type DialogType = {
 
 const Dialog: React.SFC<any> = props => {
   let dialog: any = (
-    <div className={"dialog"}>
+    <div className={"dialog " + props.dialogClass}>
       <button className={"dialogClose"} onClick={props.onClose}>X</button>
       <div>{props.children}</div>
     </div>

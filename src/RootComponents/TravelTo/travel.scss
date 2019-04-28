@@ -1,9 +1,6 @@
 @import '../../scss/common.scss';
 
 .travel-to {
-    &.active {
-        @include modal;
-    }
 
     h1, p {
         padding: 0;

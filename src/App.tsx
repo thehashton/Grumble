@@ -11,12 +11,12 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 class App extends Component {
   render() {
-
     return (
       <div className="App">
           <div className="App-header">
             <Header />
-
+            <div className={"container"}>
+            <React.Fragment>
             <Route render={({location}) => (
               <TransitionGroup>
                 <CSSTransition
@@ -34,8 +34,9 @@ class App extends Component {
                   </CSSTransition>
               </TransitionGroup>
             )} />
-
-          </div>
+            </React.Fragment>
+            </div>
+            </div>
         </div>
     );
   }

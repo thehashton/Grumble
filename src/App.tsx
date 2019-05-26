@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './RootComponents/Home';
 import Header from './components/Global/Header';
-import ApolloClient from "apollo-boost";
-
+import { Switch, Route } from 'react-router-dom';
+import About from './RootComponents/About';
+import Account from './RootComponents/Account';
+import FAQ from './RootComponents/FAQ';
+import Contact from './RootComponents/Contact';
 class App extends Component {
   render() {
-
-    const client = new ApolloClient({
-      uri: "https://localhost:4000/graphql"
-    });
 
     return (
       <div className="App">
           <div className="App-header">
             <Header />
-            <Home />
+
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/account" component={Account} />
+                <Route path="/faq" component={FAQ} />
+                <Route path="/contact" component={Contact} />
+            </Switch>
           </div>
         </div>
     );

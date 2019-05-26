@@ -1,5 +1,18 @@
+html, body {
+  height: 100%;
+  background: #2b3672;
+}
+
 .App {
   text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding-top: 200px;
+  @media screen and (min-width: 768px){
+    padding-top: 120px;
+  }
 }
 
 .App-logo {
@@ -8,8 +21,6 @@
 }
 
 .App-header {
-  background-color: #2b3672;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,4 +68,8 @@
 .fade-exit.fade-exit-active {
   opacity: 0;
   transition: opacity 150ms linear;
+}
+
+.fade-enter-done {
+  margin: auto;
 }

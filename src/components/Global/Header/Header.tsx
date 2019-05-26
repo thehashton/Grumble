@@ -1,8 +1,6 @@
 import React from 'react';
 import './header.scss';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import Home from '../../../RootComponents/Home';
-import About from '../../../RootComponents/About';
 
 const Header = (props: any) => {
     return (

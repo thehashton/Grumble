@@ -37,7 +37,7 @@ export const Home: React.SFC = () => {
   const message = msgArr[Math.floor(Math.random()*msgArr.length)];
 
   return (
-    <div>
+    <div className={"Home"}>
       <HeroLogo />
       <HeroTitle />
       <Buttons />

@@ -39,6 +39,7 @@
     align-items: center;
     list-style-type: none;
     font-size: 0;
+    padding-left: 0;
 }
 
 .menu__item {
@@ -51,10 +52,13 @@
     display: flex;
     text-decoration: none;
     color: white;
-    font-size: 22px;
     height: 100%;
     padding: 22px;
+    font-size: 18px;
 
+    @media screen and (min-width: 768px){
+        font-size: 22px;
+    }
 
     &:hover {
         background-color: darken(#383aa1, 20%);

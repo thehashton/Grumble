@@ -16,7 +16,6 @@ export default class Buttons extends Component {
 
   render() {
 
-
     const {foodTypesOpen, randomChoiceOpen, travelToOpen} = this.state;
 
     return (

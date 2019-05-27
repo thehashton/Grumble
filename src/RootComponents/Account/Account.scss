@@ -1,3 +1,145 @@
 .Account {
     width: 100%;
+
+    .Account__title, p {
+        margin: 0;
+        text-align: start;
+        color: #000;
+    }
+}
+
+.Account__content {
+    max-width: 1400px;
+}
+
+.avatar {
+    padding: 10px 20px 0 20px;
+}
+
+.avatar img {
+    fill: white;
+    max-width: 100px;
+}
+
+
+// Sidebar of account dashboard
+.sidebar {
+    text-align: start;
+    top: 150px;
+    position: fixed;
+    height: 100%;
+    background: #181c2b;
+    z-index: 3;
+    width: 200px;
+    transition: ease-in-out all 0.5s;
+
+    @media screen and (min-width: 768px) {
+        top: 70px;
+        width: 300px;
+    }
+
+    &.active {
+        width: 60px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.sidebar.active {
+    @media screen and (max-width: 768px) {
+        top: 145px;
+    }
+
+    .avatar img {
+        width: 30px !important;
+
+        @media screen and (min-width:768px) {
+            width: 100px;
+        }
+    }
+
+    .side-menu__link {
+        display: none;
+    }
+
+    .side-menu__item {
+        width: 20px;
+    }
+
+    .sidebar-minimise {
+        display: none;
+    }
+}
+
+.sidebar-minimise {
+    &:after {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    content:'<';
+    font-size: 32px;
+    padding: 20px;
+    color: white;
+    }
+        &:hover {
+            cursor: pointer;
+        }
+}
+
+.sidebar.minimized {
+    width: 75px;
+}
+
+.side-menu__item {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    border-bottom: 1px solid #596180;
+    padding: 20px;
+    transition: ease-in-out;
+    transition-duration: 0.25s;
+    font-size: 24px;
+    font-weight: bold;
+    transition: ease-in-out all 0.5s;
+
+    @media screen and (min-width: 768px) {
+        width: 260px;
+    }
+
+    &:hover {
+        right: 5px;
+        cursor: pointer;
+        background: lighten(#181c2b, 20%);
+
+    }
+}
+
+.side-menu__link {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+.side-menu__icon {
+    img {
+        display: block;
+        height: 100%;
+    }
+}
+
+// Content
+.Content__wrapper {
+    background: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: #181c2b 4px 4px 4px;
+    margin-top: 20px;
+    margin-left: 340px;
+    margin-right: 20px;
+    padding: 20px
 }

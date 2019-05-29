@@ -6,6 +6,9 @@
         text-align: start;
         color: #000;
     }
+    h1 {
+        color: black;
+    }
 }
 
 .Account__content {
@@ -61,12 +64,13 @@
         }
     }
 
-    .side-menu__link {
+ .side-menu__link p{
         display: none;
     }
 
     .side-menu__item {
         width: 20px;
+        justify-content: center;
     }
 
     .sidebar-minimise {
@@ -119,10 +123,18 @@
 }
 
 .side-menu__link {
-    color: white;
     text-decoration: none;
     padding-left: 10px;
     font-size: 22px;
+
+    @media screen and (min-width: 768px){
+        display: flex;
+    }
+
+    p {
+        color: white;
+        margin-left: 10px;
+    }
 }
 
 .side-menu__icon {

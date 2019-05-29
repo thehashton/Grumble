@@ -31,7 +31,7 @@
     background: #181c2b;
     z-index: 3;
     width: 200px;
-    transition: ease-in-out all 0.5s;
+    transition: ease-in-out all 0.1s;
 
     @media screen and (min-width: 768px) {
         top: 70px;
@@ -104,7 +104,7 @@
     transition-duration: 0.25s;
     font-size: 24px;
     font-weight: bold;
-    transition: ease-in-out all 0.5s;
+    transition: ease-in-out all 0.1s;
 
     @media screen and (min-width: 768px) {
         width: 260px;
@@ -141,5 +141,10 @@
     margin-top: 20px;
     margin-left: 340px;
     margin-right: 20px;
-    padding: 20px
+    padding: 20px;
+    transition: ease-in-out all 0.1s;
+
+    &.active {
+        margin-left: 80px;
+    }
 }

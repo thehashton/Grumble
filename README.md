@@ -10,9 +10,12 @@ By Harry Ghazni
    :.          \\,----,         ,;
     `.`--.___   (    /  ___.--','
       `.     ``-----'-''     ,'
-Helping users find places to eat near them.
             `-._______.-'
 ```
+Helping users find places to eat near them.
+
+Visit the demo
+https://eat.netlify.com/
 
 
 Run the following to start the project

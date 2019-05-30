@@ -1,0 +1,4 @@
+[build]
+base = "eat/"
+publish = "eat/build/"
+command = "npm run build"

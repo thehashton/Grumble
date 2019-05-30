@@ -1,4 +1,4 @@
 [build]
-base = "eat/"
-publish = "eat/build/"
+base = "./"
+publish = "build/"
 command = "npm run build"

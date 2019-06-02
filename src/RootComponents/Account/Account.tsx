@@ -20,7 +20,7 @@ const logoutIcon = '../../assets/images/logout-icon.svg';
 export default class Account extends Component {
 
   //TODO tidy this dirty code up
-  toggleSidebar = function() {
+  toggleSidebar = function () {
     const contentEle: any = document.querySelector('.Content__wrapper');
     const sidebarEle: any = document.querySelector('.sidebar');
 
@@ -48,86 +48,86 @@ export default class Account extends Component {
             <p>Welcome _User_</p>
             <p>Admin content goes here</p>
             <React.Fragment>
-            <Route render={({location}) => (
-              <TransitionGroup>
-                <CSSTransition
-                  key={location.key}
-                  timeout={200}
-                  classNames="fade"
+              <Route render={({ location }) => (
+                <TransitionGroup>
+                  <CSSTransition
+                    key={location.key}
+                    timeout={200}
+                    classNames="fade"
                   >
                     <Switch location={location}>
-                        <Route exact path="/account/adminAccount" component={adminAccount} />
-                        <Route path="/account/edit" component={Edit} />
-                        <Route path="/account/password" component={Password} />
-                        <Route path="/account/address" component={Address} />
-                        <Route path="/account/wishlist" component={Wishlist} />
-                        <Route path="/account/logout" component={Logout} />
+                      <Route exact path="/account/adminAccount" component={adminAccount} />
+                      <Route path="/account/edit" component={Edit} />
+                      <Route path="/account/password" component={Password} />
+                      <Route path="/account/address" component={Address} />
+                      <Route path="/account/wishlist" component={Wishlist} />
+                      <Route path="/account/logout" component={Logout} />
                     </Switch>
                   </CSSTransition>
-              </TransitionGroup>
-            )} />
+                </TransitionGroup>
+              )} />
             </React.Fragment>
           </div>
 
           <div
-          onClick={this.toggleSidebar}
-          className={`sidebar`}>
+            onClick={this.toggleSidebar}
+            className={`sidebar`}>
             <div className="avatar" title="avatar">
-              <img src={blankAvatar}/>
+              <img src={blankAvatar} />
             </div>
             <div
-            onClick={this.toggleSidebar}
-            className={`sidebar-minimise`}>
+              onClick={this.toggleSidebar}
+              className={`sidebar-minimise`}>
             </div>
             <ul className={"side-menu"}>
               <li className="side-menu__item" title="account" onClick={this.preventSideMenuItem}>
-              <NavLink exact to={"/account/adminAccount"} className={"side-menu__link"} activeClassName="active">
-                <span className="side-menu__icon account">
-                  <img src={accountIcon} alt="account"/>
-                </span>
-                <p>My Account</p>
+                <NavLink exact to={"/account/adminAccount"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon account">
+                    <img src={accountIcon} alt="account" />
+                  </span>
+                  <p>My Account</p>
                 </NavLink>
-                </li>
+              </li>
               <li className="side-menu__item" title="edit" onClick={this.preventSideMenuItem}>
-              <NavLink to={"/account/edit"} className={"side-menu__link"} activeClassName="active">
-                <span className="side-menu__icon edit">
-                  <img src={editIcon} alt="edit"/>
-                </span>
-                <p>Edit</p>
+                <NavLink to={"/account/edit"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon edit">
+                    <img src={editIcon} alt="edit" />
+                  </span>
+                  <p>Edit</p>
                 </NavLink>
-                </li>
+              </li>
               <li className="side-menu__item" title="password" onClick={this.preventSideMenuItem}>
-              <NavLink to={"/account/password"} className={"side-menu__link"} activeClassName="active">
-              <span className="side-menu__icon password">
-                  <img src={passwordIcon} alt="password"/>
-                </span>
-                <p>Password</p>
+                <NavLink to={"/account/password"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon password">
+                    <img src={passwordIcon} alt="password" />
+                  </span>
+                  <p>Password</p>
                 </NavLink>
-                </li>
+              </li>
               <li className="side-menu__item" title="address" onClick={this.preventSideMenuItem}>
-              <NavLink to={"/account/address"} className={"side-menu__link"} activeClassName="active">
-              <span className="side-menu__icon address">
-                  <img src={addressIcon} alt="address"/>
-                </span>
-                <p>Address</p>
+                <NavLink to={"/account/address"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon address">
+                    <img src={addressIcon} alt="address" />
+                  </span>
+                  <p>Address</p>
                 </NavLink>
-                </li>
+              </li>
               <li className="side-menu__item" title="wishlist" onClick={this.preventSideMenuItem}>
-              <NavLink to={"/account/wishlist"} className={"side-menu__link"} activeClassName="active">
-              <span className="side-menu__icon wishlist">
-                  <img src={wishlistIcon} alt="wishlist"/>
-                </span>
-                <p>Wish List</p>
+                <NavLink to={"/account/wishlist"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon wishlist">
+                    <img src={wishlistIcon} alt="wishlist" />
+                  </span>
+                  <p>Wish List</p>
                 </NavLink>
-                </li>
+              </li>
               <li className="side-menu__item" title="logout" onClick={this.preventSideMenuItem}>
-              <NavLink to={"/account/logout"} className={"side-menu__link"} activeClassName="active">
-              <span className="side-menu__icon logout">
-                  <img src={logoutIcon} alt="Log Out"/>
-                </span>
-                <p>Logout</p>
+                <NavLink to={"/account/logout"} className={"side-menu__link"} activeClassName="active">
+                  <span className="side-menu__icon logout">
+                    <img src={logoutIcon} alt="Log Out" />
+                  </span>
+                  <p>Logout</p>
                 </NavLink>
-                </li>
+              </li>
             </ul>
           </div>
         </div>

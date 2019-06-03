@@ -1,27 +1,24 @@
-const path = require("path") 
-
-// Require the new plugin
-const HtmlWebpackPlugin = require("html-webpack-plugin") 
-
+const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const webpack = require('webpack');
 
-module.exports = { 
+module.exports = {
   entry: path.join(__dirname,'src','index.tsx'),
   devtool: "source-map",
-  resolve: { 
-    extensions: [".ts", ".tsx", ".js", ".json"] 
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
   },
   devServer: {
     contentBase: path.join(__dirname,'src'),
     watchContentBase: true,
     historyApiFallback: true,
   },
-  output: { 
+  output: {
     path: path.join(__dirname,'dist'),
     filename: 'index_bundle.js',
-  }, 
+  },
   mode: process.env.NODE_ENV || 'development',
-  module: { 
+  module: {
     rules: [
        {
         // this is so that we can compile any React,
@@ -31,8 +28,8 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader'
        },
-       {  
-        test: /\.tsx?$/,  
+       {
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: "awesome-typescript-loader",
         query: {

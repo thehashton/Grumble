@@ -1,5 +1,20 @@
 import React from 'react'
 import './FoodTypes.scss';
+import { ApolloProvider, Query } from "react-apollo";
+import { gql } from 'apollo-boost';
+import { client } from '../..';
+
+const EATERY_QUERY = gql`
+  {
+    eateries {
+      id
+      name
+      address
+      foodType
+    }
+  }
+`;
+
 export const FoodTypes: React.SFC = () => {
 
   //TODO add GraphQL food types data
@@ -16,6 +31,16 @@ export const FoodTypes: React.SFC = () => {
             <li className="food-type-item">Curry</li>
             <li className="food-type-item">Carribean</li>
           </ul>
+
+          <ApolloProvider client={client}>
+            <Query query={EATERY_QUERY}>
+              {({loading, data} : any) => {
+                if (loading) return "Loading...";
+                const { eateries } = data;
+                return eateries.map((eatery: any) => <h1 key={eatery.id}>{eatery.name}</h1>)
+              }}
+            </Query>
+          </ApolloProvider>
     </div>
   )
 

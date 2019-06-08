@@ -55,7 +55,7 @@ mutation {
 >Delete User
 ```
 mutation {
-  deleteUser(id: "1", name: "Hannibal Barca", email: "dan@dan.com") {
+  deleteUser(name: "Hannibal Barca", email: "hanibobo69@carthage.com") {
     id
     name
     email

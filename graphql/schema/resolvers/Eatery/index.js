@@ -1,18 +1,18 @@
-// The User schema
-import User from "../../../server/models/User";
+// The Eatery schema
+import Eatery from "../../../server/models/Eatery";
 
 export default {
   Query: {
-    user: (root, args) => {
+    eatery: (root, args) => {
       return new Promise((resolve, reject) => {
-        User.findOne(args).exec((err, res) => {
+        Eatery.findOne(args).exec((err, res) => {
           err ? reject(err) : resolve(res);
         });
       });
     },
-    users: () => {
+    eateries: () => {
       return new Promise((resolve, reject) => {
-        User.find({})
+        Eatery.find({})
           .populate()
           .exec((err, res) => {
             err ? reject(err) : resolve(res);
@@ -21,27 +21,27 @@ export default {
     }
   },
   Mutation: {
-    addUser: (root, { id, name, email }) => {
-      const newUser = new User({ id, name, email });
+    addEatery: (root, { id, name, address, foodType }) => {
+      const newEatery = new Eatery({ id, name, address, foodType });
 
       return new Promise((resolve, reject) => {
-        newUser.save((err, res) => {
-          err ? reject(err) : resolve(res);
+        newEatery.save((err, res) => {
+          err ? reject(err) : resolve(res)
         });
       });
     },
-    editUser: (root, { id, name, email }) => {
+    editEatery: (root, { id, name, address, foodType }) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndUpdate({ id }, { $set: { name, email } }).exec(
+        Eatery.findOneAndUpdate({ id }, { $set: { name, address, foodType } }).exec(
           (err, res) => {
             err ? reject(err) : resolve(res);
           }
         );
       });
     },
-    deleteUser: (root, args) => {
+    deleteEatery: (root, args) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndRemove(args).exec((err, res) => {
+        Eatery.findOneAndRemove(args).exec((err, res) => {
           err ? reject(err) : resolve(res);
         });
       });

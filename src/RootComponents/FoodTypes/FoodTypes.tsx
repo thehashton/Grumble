@@ -2,6 +2,7 @@ import React from 'react'
 import './FoodTypes.scss';
 export const FoodTypes: React.SFC = () => {
 
+  //TODO add GraphQL food types data
   return (
     <div className="food-types">
           <ul className="food-type-list">

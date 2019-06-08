@@ -34,5 +34,5 @@ mongoose
 
   app.listen(PORT, () =>
     console.log(`Server running on port localhost:${PORT}/graphql`),
-    opn('http://localhost:4000/graphql')
+    // opn('http://localhost:4000/graphql')
   );

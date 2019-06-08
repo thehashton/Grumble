@@ -20,15 +20,6 @@ const EaterySchema = new Schema({
     type: String,
     required: true
   },
-  email: {
-    type: String,
-    unique: true,
-    required: true
-  },
-  telephone: {
-    type: String,
-    required: false
-  },
   posts: [
     {
       type: Schema.Types.ObjectId,

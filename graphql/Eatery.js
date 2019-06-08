@@ -20,15 +20,7 @@ const EaterySchema = new Schema({
   foodType: {
     type: String,
     required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  telephone: {
-    type: String,
-    required: true
-  },
+  }
 });
 
 const Eatery = mongoose.model("Eatery", EaterySchema);

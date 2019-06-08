@@ -1,4 +1,4 @@
-// The Eatery schema.
+// The Eatery schema
 import Eatery from "../../../server/models/Eatery";
 
 export default {
@@ -21,18 +21,18 @@ export default {
     }
   },
   Mutation: {
-    addEatery: (root, { id, name, address, foodType, email, telephone }) => {
-      const newEatery = new Eatery({ id, name, address, foodType, email, telephone });
+    addEatery: (root, { id, name, address, foodType }) => {
+      const newEatery = new Eatery({ id, name, address, foodType });
 
       return new Promise((resolve, reject) => {
         newEatery.save((err, res) => {
-          err ? reject(err) : resolve(res);
+          err ? reject(err) : resolve(res)
         });
       });
     },
-    editEatery: (root, { id, name, address, foodType, email, telephone }) => {
+    editEatery: (root, { id, name, address, foodType }) => {
       return new Promise((resolve, reject) => {
-        Eatery.findOneAndUpdate({ id }, { $set: { name, address, foodType, email, telephone } }).exec(
+        Eatery.findOneAndUpdate({ id }, { $set: { name, address, foodType } }).exec(
           (err, res) => {
             err ? reject(err) : resolve(res);
           }

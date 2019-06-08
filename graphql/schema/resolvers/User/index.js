@@ -1,4 +1,4 @@
-// The User schema.
+// The User schema
 import User from "../../../server/models/User";
 
 export default {

@@ -37,7 +37,13 @@ export const FoodTypes: React.SFC = () => {
               {({loading, data} : any) => {
                 if (loading) return "Loading...";
                 const { eateries } = data;
-                return eateries.map((eatery: any) => <h1 key={eatery.id}>{eatery.name}</h1>)
+                return eateries.map((eatery: any) =>
+                <div className="Eatery" key={eatery.id}>
+                  <h3 className="name">{eatery.name}</h3>
+                  <p className="address">{eatery.address}</p>
+                  <p className="type">{eatery.foodType}</p>
+                </div>
+                )
               }}
             </Query>
           </ApolloProvider>

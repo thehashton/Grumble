@@ -21,3 +21,11 @@
         top: 3px;
     }
 }
+
+.addEatery {
+    background: #2d83ad;
+
+    &:hover {
+        background: darken(#2d83ad, 10%);
+    }
+}

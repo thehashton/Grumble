@@ -1,65 +1,34 @@
 import React, { Component } from 'react';
-import { Mutation } from "react-apollo";
-import gql from 'graphql-tag';
-
-const ADD_EATERY = gql`
-  mutation {
-    addEatery(id: "", name: "Hungry Pumpkin", address:"Stoney Street", foodType: "Italian") {
-      id
-      name
-      address
-      foodType
-    }
-  }
-`;
-
-const GET_EATERY = gql`
-    query {
-        eateries {
-        id
-        name
-        address
-        foodType
-    }
-  }
-`;
-
+import './addEatery.scss';
 
 export default class AddEatery extends Component {
     render() {
-        let input: any;
         return (
-            <div>
+            <>
                 <h1>add eatery</h1>
-                <Mutation mutation={ADD_EATERY}
-                update={(cache: any, { data: { addEatery } }: any) => {
-                    const { eateries } = cache.readQuery({ query: GET_EATERY });
-                    cache.writeQuery({
-                      query: GET_EATERY,
-                      data: { todos: eateries.concat([addEatery]) },
-                    });
-                  }}
-                >
-                    {(addEatery: any, { data }: any) => (
-                        <div>
-                        <form
-                            onSubmit={e => {
-                            e.preventDefault();
-                            addEatery({ variables: { type: input.value } });
-                            input.value = "";
-                            }}
-                        >
-                            <input
-                            ref={node => {
-                                input = node;
-                            }}
-                            />
-                            <button type="submit">Add Todo</button>
-                        </form>
-                        </div>
-                    )}
-                </Mutation>
-            </div>
+                <form action="submit">
+                  <p>Name: </p>
+                  <input type="text" placeholder={"Name"}/>
+                  <p>Address: </p>
+                  <input type="text" placeholder={"Address"}/>
+                  <div className={"foodtype-wrapper"}>
+                    <span>Food Type: </span>
+                    <select name="" id="">
+                      <option value="Pizza">Pizza</option>
+                      <option value="Chicken">Chicken</option>
+                      <option value="Indian">Indian</option>
+                      <option value="Chinese">Chinese</option>
+                      <option value="English">English</option>
+                      <option value="Chips">Fish & Chips</option>
+                      <option value="Kebab">Kebab</option>
+                      <option value="Carribean">Carribean</option>
+                      <option value="Vietnamese">Vietnamese</option>
+                      <option value="Thai">Thai</option>
+                    </select>
+                  </div>
+                    <button>Submit</button>
+                </form>
+            </>
         )
     }
 }

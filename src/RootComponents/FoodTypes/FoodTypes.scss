@@ -10,18 +10,18 @@
 }
 
 .food-type-item {
-    padding: 40px 5px;
+    padding: $base-spacing*2 $half-spacing/2;
     border: 1px dashed rgba(47, 144, 189, 0.411);
 
     &:hover {
         background-color: rgba(47, 144, 189, 0.411);
-        border: 1px dashed #fff;
+        border: 1px dashed $color-white;
         cursor: pointer;
     }
 }
 
 .Eatery {
-    padding-bottom: 20px;
+    padding-bottom: $base-spacing;
 }
 
 h1, p, h3 {

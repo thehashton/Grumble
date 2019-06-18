@@ -6,7 +6,7 @@
     border-radius: $half-spacing/2;
     margin: $half-spacing/2;
     color: $color-white;
-    font-size: $base-spacing;
+    @include font-size(20px);
     text-transform: capitalize;
     font-weight: bold;
 

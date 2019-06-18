@@ -22,7 +22,7 @@
 
     h1 {
         margin-bottom: 0;
-        font-size: 42px;
+        @include font-size(42px);
 
         &:hover {
             text-shadow: 6px 6px 2px $color-secondary-dark;
@@ -54,10 +54,10 @@
     color: $color-white;
     height: 100%;
     padding: 22px;
-    font-size: 18px;
+    @include font-size(18px);
 
     @media screen and (min-width: $lap-start){
-        font-size: 22px;
+        @include font-size(22px);
     }
 
     &:hover {

@@ -1,12 +1,12 @@
 // General button style
 .button {
     background-color:rgb(102, 104, 231);
-    padding: 20px;
+    padding: $base-spacing;
     border-color: transparent;
-    border-radius: 5px;
-    margin: 5px;
-    color: white;
-    font-size: 20px;
+    border-radius: $half-spacing/2;
+    margin: $half-spacing/2;
+    color: $color-white;
+    font-size: $base-spacing;
     text-transform: capitalize;
     font-weight: bold;
 
@@ -23,5 +23,5 @@
 }
 
 .addEatery {
-    background: #2d83ad;
+    background: $color-highlight;
 }

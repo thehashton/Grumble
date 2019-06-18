@@ -6,10 +6,10 @@
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: #383aa1;
+    background-color: $color-primary;
     box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.15);
 
-    @media (min-width: 768px) {
+    @media (min-width: $lap-start) {
         flex-direction: row;
     }
 }
@@ -17,7 +17,7 @@
 .logo {
     a {
         text-decoration: none;
-        color: white;
+        color: $color-white;
     }
 
     h1 {
@@ -25,11 +25,11 @@
         font-size: 42px;
 
         &:hover {
-            text-shadow: 6px 6px 2px #23243a;
+            text-shadow: 6px 6px 2px $color-secondary-dark;
         }
 
-        @media (min-width: 768px) {
-            margin: 10px;
+        @media (min-width: $lap-start) {
+            margin: $half-spacing;
         }
     }
 }
@@ -43,25 +43,25 @@
 }
 
 .menu__item {
-    @media only screen and (min-width: 768px) {
-        padding-right: 20px;
+    @media only screen and (min-width: $lap-start) {
+        padding-right: $base-spacing;
     }
 }
 
 .menu__link {
     display: flex;
     text-decoration: none;
-    color: white;
+    color: $color-white;
     height: 100%;
     padding: 22px;
     font-size: 18px;
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: $lap-start){
         font-size: 22px;
     }
 
     &:hover {
-        background-color: darken(#383aa1, 20%);
+        background-color: darken($color-primary, 20%);
         box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
     }
 }

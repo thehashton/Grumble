@@ -5,10 +5,10 @@
   p {
     margin: 0;
     text-align: start;
-    color: #000;
+    color: $color-base;
   }
   h1 {
-    color: black;
+    color: $color-base;
   }
 }
 
@@ -17,11 +17,11 @@
 }
 
 .avatar {
-  padding: 10px 20px 0 20px;
+  padding: $half-spacing $base-spacing 0 $base-spacing;
 }
 
 .avatar img {
-  fill: white;
+  fill: $color-white;
   max-width: 100px;
 }
 
@@ -36,13 +36,13 @@
   width: 200px;
   transition: ease-in-out all 0.1s;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $lap-start) {
     top: 70px;
     width: 300px;
   }
 
   &.active {
-    width: 60px;
+    width: $base-spacing*3;
   }
 
   ul {
@@ -52,14 +52,14 @@
 }
 
 .sidebar.active {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $lap-start) {
     top: 145px;
   }
 
   .avatar img {
-    width: 30px !important;
+    width: $base-spacing*1.5 !important;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $lap-start) {
       width: 100px;
     }
   }
@@ -69,7 +69,7 @@
   }
 
   .side-menu__item {
-    width: 20px;
+    width: $base-spacing;
     justify-content: center;
   }
 
@@ -82,12 +82,12 @@
   &:after {
     display: block;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: $half-spacing;
+    top: $half-spacing;
     content: "<";
     font-size: 32px;
-    padding: 20px;
-    color: white;
+    padding: $base-spacing;
+    color: $color-white;
   }
   &:hover {
     cursor: pointer;
@@ -103,14 +103,14 @@
   align-items: center;
   width: 160px;
   border-bottom: 1px solid #596180;
-  padding: 20px;
+  padding: $base-spacing;
   transition: ease-in-out;
   transition-duration: 0.25s;
   font-size: 24px;
   font-weight: bold;
   transition: ease-in-out all 0.1s;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $lap-start) {
     width: 260px;
   }
 
@@ -123,16 +123,16 @@
 
 .side-menu__link {
   text-decoration: none;
-  padding-left: 10px;
+  padding-left: $half-spacing;
   font-size: 22px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $lap-start) {
     display: flex;
   }
 
   p {
-    color: white;
-    margin-left: 10px;
+    color: $color-white;
+    margin-left: $half-spacing;
   }
 }
 
@@ -145,17 +145,17 @@
 
 // Content
 .Content__wrapper {
-  background: white;
-  border: 1px solid white;
-  border-radius: 10px;
+  background: $color-white;
+  border: 1px solid $color-white;
+  border-radius: $half-spacing;
   box-shadow: #181c2b 4px 4px 4px;
-  margin-top: 20px;
+  margin-top: $base-spacing;
   margin-left: 340px;
-  margin-right: 20px;
-  padding: 20px;
+  margin-right: $base-spacing;
+  padding: $base-spacing;
   transition: ease-in-out all 0.1s;
 
   &.active {
-    margin-left: 80px;
+    margin-left: $base-spacing*4;
   }
 }

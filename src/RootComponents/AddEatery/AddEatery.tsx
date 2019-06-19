@@ -26,7 +26,7 @@ export default class AddEatery extends Component {
                       <option value="Thai">Thai</option>
                     </select>
                   </div>
-                    <button>Submit</button>
+                    <button className={'button'}>Submit</button>
                 </form>
             </>
         )

@@ -1,6 +1,19 @@
 .foodtype-wrapper {
+    select {
+        color: $color-base;
+        min-width: 200px;
+        height: ($base-spacing*2)+ 2;
+    }
+
     span {
         display: block;
         margin-top: $base-spacing;
+    }
+}
+
+form {
+    input {
+        min-width: 200px;
+        padding: $half-spacing;
     }
 }

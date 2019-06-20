@@ -1,19 +1,44 @@
-.foodtype-wrapper {
-    select {
-        color: $color-base;
-        min-width: 200px;
-        height: ($base-spacing*2)+ 2;
+.addEatery {
+    form {
+        max-width: 200px;
+        margin: auto;
+
+        input {
+            min-width: 200px;
+            padding: $half-spacing;
+            margin-top: $half-spacing;
+        }
+
+        p {
+            margin-top: $half-spacing;
+        }
+
     }
 
-    span {
-        display: block;
-        margin-top: $base-spacing;
+    h1 {
+        margin-top: 0;
     }
-}
 
-form {
-    input {
-        min-width: 200px;
-        padding: $half-spacing;
+    .foodtype-wrapper {
+        min-width: 224px;
+        margin-bottom: $half-spacing;
+
+        select {
+            color: $color-base;
+            width: 100%;
+            height: ($base-spacing*2)+ 2;
+            margin-top: $half-spacing;
+        }
+
+        span {
+            display: block;
+            margin-top: $half-spacing;
+        }
+
+    }
+
+    .button {
+        min-width: 224px;
+        margin: $half-spacing 0 0 0;
     }
 }

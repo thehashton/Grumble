@@ -6,7 +6,7 @@ export default class AddEatery extends Component {
         return (
             <>
                 <h1>add eatery</h1>
-                <form action="submit">
+                <form action="submit" className={'addEateryForm'}>
                   <p>Name: </p>
                   <input type="text" placeholder={"Name"}/>
                   <p>Address: </p>

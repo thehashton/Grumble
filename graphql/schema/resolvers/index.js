@@ -1,8 +1,8 @@
-import { mergeResolvers } from "merge-graphql-schemas";
+const { mergeResolvers } = require("merge-graphql-schemas");
 
-import User from "./User/";
-import Eatery from "./Eatery/";
+const User = require("./User/");
+const Eatery = require("./Eatery/");
 
 const resolvers = [User, Eatery];
 
-export default mergeResolvers(resolvers);
+module.exports = mergeResolvers(resolvers);

@@ -11,18 +11,6 @@ mongoose.Promise = global.Promise;
 mongoose.connect(url, { useNewUrlParser: true });
 mongoose.connection.once('open', () => console.log(`Connected to mongo at ${url}`));
 
-// const typeDefs = gql`
-//   type Query {
-//     hello: String
-//   }
-// `;
-
-// const resolvers = {
-//   Query: {
-//     hello: () => 'hello World!',
-//   },
-// };
-
 const server = new ApolloServer({
   typeDefs,
   resolvers,

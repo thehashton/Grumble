@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "server": "nodemon --exec babel-node ./graphql/index.js",
+    "server": "node ./graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
     "build": "react-scripts build",
     "test": "react-scripts test",

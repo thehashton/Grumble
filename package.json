@@ -42,7 +42,7 @@
     "graphql-tools": "^4.0.4",
     "merge-graphql-schemas": "^1.5.8",
     "mongoose": "^5.4.9",
-    "nodemon": "^1.18.9",
+    "nodemon": "1.18.9",
     "open": "^6.2.0",
     "open-cli": "^1.0.5",
     "react": "^16.8.1",

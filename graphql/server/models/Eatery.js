@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { ObjectID } from "mongodb";
+const mongoose = require("mongoose");
+const { ObjectID } = require("mongodb");
 
 const Schema = mongoose.Schema;
 
@@ -34,4 +34,4 @@ const EaterySchema = new Schema({
   ]
 });
 
-export default mongoose.model("Eatery", EaterySchema);
+module.exports = mongoose.model("Eatery", EaterySchema);

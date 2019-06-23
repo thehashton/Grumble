@@ -1,7 +1,7 @@
 // The Eatery schema
-import Eatery from "../../../server/models/Eatery";
+const Eatery = require("../../../server/models/Eatery");
 
-export default {
+module.exports = {
   Query: {
     eatery: (root, args) => {
       return new Promise((resolve, reject) => {

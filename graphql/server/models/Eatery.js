@@ -19,19 +19,7 @@ const EaterySchema = new Schema({
   foodType: {
     type: String,
     required: true
-  },
-  posts: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Post"
-    }
-  ],
-  comments: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Comment"
-    }
-  ]
+  }
 });
 
 module.exports = mongoose.model("Eatery", EaterySchema);

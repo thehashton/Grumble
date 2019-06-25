@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const EaterySchema = new Schema({
   id: {
     type: String,
-    required: true,
+    required: false,
     unique: true
   },
   name: {

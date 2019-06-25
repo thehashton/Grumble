@@ -21,8 +21,8 @@ module.exports = {
     }
   },
   Mutation: {
-    addEatery: (root, { id, name, address, foodType }) => {
-      const newEatery = new Eatery({ id, name, address, foodType });
+    addEatery: (root, { name, address, foodType }) => {
+      const newEatery = new Eatery({ name, address, foodType });
 
       return new Promise((resolve, reject) => {
         newEatery.save((err, res) => {

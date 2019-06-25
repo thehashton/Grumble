@@ -37,7 +37,7 @@ cb build
 ```
 
 ### GraphQL
-To view the graphql endpoint run `cb graphql` and go to `localhost:4000/graphql`.
+To view the graphql endpoint run `cb graphql` and go to `localhost:4000/graphql` which will open up apollo playground.
 
 To mutate the DB
 
@@ -48,6 +48,18 @@ mutation {
     id
     name
     email
+  }
+}
+```
+
+>Add eatery
+```
+mutation {
+  addUser(id: "1", name: "Delboys Rat Burgers", address: "Behind the spoons", foodType: "Burgers") {
+    id
+    name
+    address
+    foodType
   }
 }
 ```

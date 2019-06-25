@@ -16,8 +16,6 @@ const EATERY_QUERY = gql`
 `;
 
 export const FoodTypes: React.SFC = () => {
-
-  //TODO add GraphQL food types data
   return (
     <div className="food-types">
           <ul className="food-type-list">
@@ -49,7 +47,6 @@ export const FoodTypes: React.SFC = () => {
           </ApolloProvider>
     </div>
   )
-
 };
 
 export default FoodTypes;

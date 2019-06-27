@@ -1,67 +1,67 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: $color-primary;
-    box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: $color-primary;
+  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.15);
 
-    @media (min-width: $lap-start) {
-        flex-direction: row;
-    }
+  @media (min-width: $lap-start) {
+    flex-direction: row;
+  }
 }
 
 .logo {
-    a {
-        text-decoration: none;
-        color: $color-white;
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    @include font-size(42px);
+
+    &:hover {
+      text-shadow: 6px 6px 2px $color-secondary-dark;
     }
 
-    h1 {
-        margin-bottom: 0;
-        @include font-size(42px);
-
-        &:hover {
-            text-shadow: 6px 6px 2px $color-secondary-dark;
-        }
-
-        @media (min-width: $lap-start) {
-            margin: $half-spacing;
-        }
+    @media (min-width: $lap-start) {
+      margin: $half-spacing;
     }
+  }
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    font-size: 0;
-    padding-left: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 0;
+  padding-left: 0;
 }
 
 .menu__item {
-    @media only screen and (min-width: $lap-start) {
-        padding-right: $base-spacing;
-    }
+  @media only screen and (min-width: $lap-start) {
+    padding-right: $base-spacing;
+  }
 }
 
 .menu__link {
-    display: flex;
-    text-decoration: none;
-    color: $color-white;
-    height: 100%;
-    padding: 22px;
-    @include font-size(18px);
+  display: flex;
+  text-decoration: none;
+  color: $color-white;
+  height: 100%;
+  padding: 22px;
+  @include font-size(18px);
 
-    @media screen and (min-width: $lap-start){
-        @include font-size(22px);
-    }
+  @media screen and (min-width: $lap-start) {
+    @include font-size(22px);
+  }
 
-    &:hover {
-        background-color: darken($color-primary, 20%);
-        box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
-    }
+  &:hover {
+    background-color: darken($color-primary, 20%);
+    box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
+  }
 }

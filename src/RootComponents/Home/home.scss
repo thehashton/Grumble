@@ -1,21 +1,22 @@
 .logo {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .Home {
-    padding-top: $base-spacing*2;
+  padding-top: $base-spacing * 2;
 }
 
 .home-wrapper {
-    width: 100%;
-    margin-bottom: $base-spacing;
+  width: 100%;
+  margin-bottom: $base-spacing;
 
-    h1, p {
-        margin: 0;
-    }
+  h1,
+  p {
+    margin: 0;
+  }
 }
 
 .buttons {
-    margin-top: $base-spacing;
+  margin-top: $base-spacing;
 }

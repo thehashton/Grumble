@@ -1,45 +1,43 @@
 .addEatery {
-    form {
-        max-width: 200px;
-        margin: auto;
+  form {
+    max-width: 200px;
+    margin: auto;
 
-        input {
-            color: $color-base;
-            min-width: 200px;
-            padding: $half-spacing;
-            margin-top: $half-spacing;
-        }
-
-        p {
-            margin-top: $half-spacing;
-        }
-
+    input {
+      color: $color-base;
+      min-width: 200px;
+      padding: $half-spacing;
+      margin-top: $half-spacing;
     }
 
-    h1 {
-        margin-top: 0;
+    p {
+      margin-top: $half-spacing;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .foodtype-wrapper {
+    min-width: 224px;
+    margin-bottom: $half-spacing;
+
+    select {
+      color: $color-base;
+      width: 100%;
+      height: ($base-spacing * 2)+ 2;
+      margin-top: $half-spacing;
     }
 
-    .foodtype-wrapper {
-        min-width: 224px;
-        margin-bottom: $half-spacing;
-
-        select {
-            color: $color-base;
-            width: 100%;
-            height: ($base-spacing*2)+ 2;
-            margin-top: $half-spacing;
-        }
-
-        span {
-            display: block;
-            margin-top: $half-spacing;
-        }
-
+    span {
+      display: block;
+      margin-top: $half-spacing;
     }
+  }
 
-    .button {
-        min-width: 224px;
-        margin: $half-spacing 0 0 0;
-    }
+  .button {
+    min-width: 224px;
+    margin: $half-spacing 0 0 0;
+  }
 }

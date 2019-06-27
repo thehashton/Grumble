@@ -26,17 +26,18 @@ module.exports = {
 
       return new Promise((resolve, reject) => {
         newEatery.save((err, res) => {
-          err ? reject(err) : resolve(res)
+          err ? reject(err) : resolve(res);
         });
       });
     },
     editEatery: (root, { id, name, address, foodType }) => {
       return new Promise((resolve, reject) => {
-        Eatery.findOneAndUpdate({ id }, { $set: { name, address, foodType } }).exec(
-          (err, res) => {
-            err ? reject(err) : resolve(res);
-          }
-        );
+        Eatery.findOneAndUpdate(
+          { id },
+          { $set: { name, address, foodType } }
+        ).exec((err, res) => {
+          err ? reject(err) : resolve(res);
+        });
       });
     },
     deleteEatery: (root, args) => {

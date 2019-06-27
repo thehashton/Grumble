@@ -17,5 +17,6 @@ const Header = (props: any) => {
             </ul>
 
         </div>
-   )}
-   export default Header;
+    )
+}
+export default Header;

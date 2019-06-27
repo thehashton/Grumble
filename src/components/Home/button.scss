@@ -1,27 +1,27 @@
 // General button style
 .button {
-    background-color:rgb(102, 104, 231);
-    padding: $base-spacing;
-    border-color: transparent;
-    border-radius: $half-spacing/2;
-    margin: $half-spacing/2;
-    color: $color-white;
-    @include font-size(20px);
-    text-transform: capitalize;
-    font-weight: bold;
+  background-color: rgb(102, 104, 231);
+  padding: $base-spacing;
+  border-color: transparent;
+  border-radius: $half-spacing/2;
+  margin: $half-spacing/2;
+  color: $color-white;
+  @include font-size(20px);
+  text-transform: capitalize;
+  font-weight: bold;
 
-    &:hover {
-        cursor: pointer;
-        background-color:rgb(56, 58, 161);
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(56, 58, 161);
+  }
 
-    &:active {
-        position: relative;
-        left: 3px;
-        top: 3px;
-    }
+  &:active {
+    position: relative;
+    left: 3px;
+    top: 3px;
+  }
 }
 
 .addEatery {
-    background: $color-highlight;
+  background: $color-highlight;
 }

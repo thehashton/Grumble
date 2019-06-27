@@ -1,29 +1,31 @@
 .food-type-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style-type: none;
-    padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: none;
+  padding: 0;
 
-     @media (min-width: 770px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  @media (min-width: 770px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .food-type-item {
-    padding: $base-spacing*2 $half-spacing/2;
-    border: 1px dashed rgba(47, 144, 189, 0.411);
+  padding: $base-spacing * 2 $half-spacing/2;
+  border: 1px dashed rgba(47, 144, 189, 0.411);
 
-    &:hover {
-        background-color: rgba(47, 144, 189, 0.411);
-        border: 1px dashed $color-white;
-        cursor: pointer;
-    }
+  &:hover {
+    background-color: rgba(47, 144, 189, 0.411);
+    border: 1px dashed $color-white;
+    cursor: pointer;
+  }
 }
 
 .Eatery {
-    margin: $base-spacing;
+  margin: $base-spacing;
 }
 
-h1, p, h3 {
-    margin: 0;
+h1,
+p,
+h3 {
+  margin: 0;
 }

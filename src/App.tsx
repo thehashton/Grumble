@@ -13,31 +13,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div className="App-header">
-            <Header />
-            <div className={"container"}>
+        <div className="App-header">
+          <Header />
+          <div className={"container"}>
             <React.Fragment>
-            <Route render={({location}) => (
-              <TransitionGroup>
-                <CSSTransition
-                  key={location.key}
-                  timeout={200}
-                  classNames="fade"
+              <Route render={({ location }) => (
+                <TransitionGroup>
+                  <CSSTransition
+                    key={location.key}
+                    timeout={200}
+                    classNames="fade"
                   >
                     <Switch location={location}>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
-                        <Route path="/account" component={Account} />
-                        <Route path="/faq" component={FAQ} />
-                        <Route path="/contact" component={Contact} />
+                      <Route exact path="/" component={Home} />
+                      <Route path="/about" component={About} />
+                      <Route path="/account" component={Account} />
+                      <Route path="/faq" component={FAQ} />
+                      <Route path="/contact" component={Contact} />
                     </Switch>
                   </CSSTransition>
-              </TransitionGroup>
-            )} />
+                </TransitionGroup>
+              )} />
             </React.Fragment>
-            </div>
-            </div>
+          </div>
         </div>
+      </div>
     );
   }
 }

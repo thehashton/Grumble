@@ -1,8 +1,9 @@
-import React from 'react'
-import './FoodTypes.scss';
+import React from "react";
+import "./FoodTypes.scss";
 import { ApolloProvider, Query } from "react-apollo";
-import { gql } from 'apollo-boost';
-import { client } from '../..';
+import { gql } from "apollo-boost";
+
+import { client } from "../..";
 
 const EATERY_QUERY = gql`
   {
@@ -35,18 +36,18 @@ export const FoodTypes: React.SFC = () => {
           {({ loading, data }: any) => {
             if (loading) return "Loading...";
             const { eateries } = data;
-            return eateries.map((eatery: any) =>
+            return eateries.map((eatery: any) => (
               <div className="Eatery" key={eatery.id}>
                 <h3 className="name">{eatery.name}</h3>
                 <p className="address">{eatery.address}</p>
                 <p className="type">{eatery.foodType}</p>
               </div>
-            )
+            ));
           }}
         </Query>
       </ApolloProvider>
     </div>
-  )
+  );
 };
 
 export default FoodTypes;

@@ -1,9 +1,8 @@
-import React from 'react'
-import './button.scss';
+import React from "react";
+import "./button.scss";
 
 export const HeroTitle: React.SFC = () => {
-
-  var msgArr = new Array();
+  var msgArr = [];
 
   msgArr[0] = "Hungry?";
   msgArr[1] = "Famished?";
@@ -16,7 +15,7 @@ export const HeroTitle: React.SFC = () => {
       <h1 id="hero-title">{message}</h1>
       <p>Let's find you a place to eat</p>
     </div>
-  )
+  );
 };
 
 export default HeroTitle;

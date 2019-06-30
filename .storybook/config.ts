@@ -1,5 +1,4 @@
 import { configure } from "@storybook/react";
-require('../src/scss/global.scss');
 
 const req = require.context('../src/', true, /.stories.tsx$/);
 

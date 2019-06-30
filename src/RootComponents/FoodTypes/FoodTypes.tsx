@@ -4,6 +4,7 @@ import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
 import { client } from "../..";
+import { EateryItem } from "../Eatery/EateryItem";
 
 const EATERY_QUERY = gql`
   {
@@ -37,11 +38,12 @@ export const FoodTypes: React.SFC = () => {
             if (loading) return "Loading...";
             const { eateries } = data;
             return eateries.map((eatery: any) => (
-              <div className="Eatery" key={eatery.id}>
-                <h3 className="name">{eatery.name}</h3>
-                <p className="address">{eatery.address}</p>
-                <p className="type">{eatery.foodType}</p>
-              </div>
+              <EateryItem
+                id={eatery.id}
+                name={eatery.name}
+                address={eatery.address}
+                foodType={eatery.foodType}
+              />
             ));
           }}
         </Query>

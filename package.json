@@ -1,7 +1,7 @@
 {
   "name": "eat",
   "version": "1.0.0",
-  "description": "",
+  "description": "find a place to eat",
   "scripts": {
     "server": "node ./graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
@@ -68,7 +68,11 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/react": "^4.1.11",
+    "@storybook/addon-knobs": "4.0.4",
+    "@storybook/react": "^4.0.7",
+    "@types/storybook__addon-knobs": "5.0.1",
+    "@types/storybook__react": "4.0.2",
+    "@types/webpack-env": "^1.13.9",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "apollo-boost": "^0.3.1",
@@ -88,7 +92,9 @@
     "https": "^1.0.0",
     "husky": "^2.7.0",
     "lint-staged": "^8.2.1",
+    "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "4.11.0",
+    "postcss-loader": "^3.0.0",
     "react-apollo": "2.5.2",
     "react-router-dom": "^4.3.1",
     "sass-loader": "7.1.0",
@@ -107,9 +113,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "babel": {
-    "presets": [
-      "latest"
-    ]
-  }
+  "main": "index.js",
+  "repository": "git@github.com:hghazni/eat.git"
 }

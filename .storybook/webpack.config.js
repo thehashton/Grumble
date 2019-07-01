@@ -1,13 +1,24 @@
-const path = require('path');
+const { resolve } = require('path');
 
-module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-                include: path.resolve(__dirname, '../src/scss'),
-            },
-        ],
-    },
+module.exports = (baseConfig, env, defaultConfig) => {
+    const rulesFn = require('../.webpack/rules').rules;
+    const rules = rulesFn(
+        {
+            outputLegacy: '',
+            generated: '',
+            output: '',
+            src: '',
+        },
+        input => input['development'],
+        input => input['modern'],
+    );
+    delete rules[1].include;
+    defaultConfig.module.rules = rules;
+    defaultConfig.resolve.extensions = ['.ts', '.tsx', '.js'];
+    defaultConfig.resolve.alias = {
+        ...(defaultConfig.resolve.alias || {}),
+        swagger: resolve(__dirname, '..', '..', 'swagger'),
+    };
+
+    return defaultConfig;
 };

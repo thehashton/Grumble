@@ -27,7 +27,6 @@ function rules(themePaths, selectMode, selectTarget) {
                 path.resolve(__dirname, '..', 'runtime'),
                 themePaths.src,
                 themePaths.generated,
-                path.resolve(__dirname, '..', '..', 'swagger'),
                 path.resolve(__dirname, '..', 'node_modules', 'debug'),
                 babelEnvDeps.include(),
             ],
@@ -50,7 +49,7 @@ function rules(themePaths, selectMode, selectTarget) {
                     options: {
                         importLoaders: 1,
                         localIdentName: '[name]-[local]-[hash:base64:3]',
-                        modules: true,
+                        modules: false,
                     },
                 },
                 {

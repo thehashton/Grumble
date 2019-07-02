@@ -15,10 +15,6 @@ module.exports = (baseConfig, env, defaultConfig) => {
     delete rules[1].include;
     defaultConfig.module.rules = rules;
     defaultConfig.resolve.extensions = ['.ts', '.tsx', '.js'];
-    defaultConfig.resolve.alias = {
-        ...(defaultConfig.resolve.alias || {}),
-        swagger: resolve(__dirname, '..', '..', 'swagger'),
-    };
 
     return defaultConfig;
 };

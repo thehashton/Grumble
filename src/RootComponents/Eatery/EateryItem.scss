@@ -1,8 +1,12 @@
 .Eatery {
-    border: 5px dashed $color-primary;
     margin: $base-spacing;
+    background: $color-primary;
+    color: $color-white;
+    padding: $base-spacing;
+    border: 1px solid transparent;
+    border-radius: $half-spacing;
 }
 
 .name {
-    border: 5px dashed $color-secondary;
+    @include font-size(30px);
 }

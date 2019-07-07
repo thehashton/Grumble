@@ -31,23 +31,24 @@ export const FoodTypes: React.SFC = () => {
         <li className="food-type-item">Curry</li>
         <li className="food-type-item">Carribean</li>
       </ul>
-
-      <ApolloProvider client={client}>
-        <Query query={EATERY_QUERY}>
-          {({ loading, data }: any) => {
-            if (loading) return "Loading...";
-            const { eateries } = data;
-            return eateries.map((eatery: any) => (
-              <EateryItem
-                id={eatery.id}
-                name={eatery.name}
-                address={eatery.address}
-                foodType={eatery.foodType}
-              />
-            ));
-          }}
-        </Query>
-      </ApolloProvider>
+      <div className={"EateryWrapper"}>
+        <ApolloProvider client={client}>
+          <Query query={EATERY_QUERY}>
+            {({ loading, data }: any) => {
+              if (loading) return "Loading...";
+              const { eateries } = data;
+              return eateries.map((eatery: any) => (
+                <EateryItem
+                  id={eatery.id}
+                  name={eatery.name}
+                  address={eatery.address}
+                  foodType={eatery.foodType}
+                />
+              ));
+            }}
+          </Query>
+        </ApolloProvider>
+      </div>
     </div>
   );
 };

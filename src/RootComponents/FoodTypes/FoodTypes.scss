@@ -29,3 +29,8 @@ p,
 h3 {
   margin: 0;
 }
+
+.EateryWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

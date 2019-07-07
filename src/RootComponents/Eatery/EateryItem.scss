@@ -1,8 +1,10 @@
 .Eatery {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     margin: $base-spacing;
     background: $color-primary;
     color: $color-white;
-    border: 1px solid transparent;
+    border: 1px solid $color-secondary-dark;
     border-radius: $half-spacing/2;
     overflow: hidden;
 

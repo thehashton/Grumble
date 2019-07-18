@@ -1,0 +1,19 @@
+.login {
+  padding: $base-spacing 0;
+  margin: auto;
+  max-width: 500px;
+  text-align: center;
+
+  input {
+    display: block;
+    padding: $base-spacing;
+    max-width: calc(500px - 40px);
+  }
+
+  span,
+  input,
+  button {
+    width: 100%;
+    margin: $half-spacing 0;
+  }
+}

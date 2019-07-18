@@ -2,11 +2,11 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import FAQ from "../FAQ";
-import "../FAQ.scss";
-const stories = storiesOf("FAQ", module);
+import Login from "../Login";
+import "../Login.scss";
+const stories = storiesOf("Login", module);
 stories.addDecorator(withKnobs);
 
-stories.add("FAQ", () => {
-  return <FAQ />;
+stories.add("Login", () => {
+  return <Login />;
 });

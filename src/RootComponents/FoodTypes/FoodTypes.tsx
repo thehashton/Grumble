@@ -39,6 +39,7 @@ export const FoodTypes: React.SFC = () => {
               const { eateries } = data;
               return eateries.map((eatery: any) => (
                 <EateryItem
+                  key={eatery.key}
                   id={eatery.id}
                   name={eatery.name}
                   address={eatery.address}

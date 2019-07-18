@@ -15,9 +15,21 @@
 }
 
 .logo {
+  position: relative;
+
   a {
     text-decoration: none;
     color: $color-white;
+  }
+
+  span {
+    position: absolute;
+    top: 55%;
+    right: $base-spacing;
+    @include font-size($small-font-size);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-failure;
   }
 
   h1 {

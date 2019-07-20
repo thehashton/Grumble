@@ -85,7 +85,7 @@ query {
 }
 ```
 
->Specific Query (for user)
+>Specific Query (for a user)
 ```
 query {
   user(id: "2"){

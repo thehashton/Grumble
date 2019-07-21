@@ -3,6 +3,9 @@ import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+import store from "../runtime/store/store";
+import { submitEatery } from "../runtime/store/actions";
+
 import Home from "./RootComponents/Home";
 import Header from "./components/Global/Header";
 import About from "./RootComponents/About";

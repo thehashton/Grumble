@@ -1,4 +1,5 @@
 .Eatery {
+    position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr;
     margin: $base-spacing;
@@ -6,7 +7,6 @@
     color: $color-white;
     border: 1px solid $color-secondary-dark;
     border-radius: $half-spacing/2;
-    overflow: hidden;
 
     h3 {
         background-color: $color-secondary;
@@ -29,4 +29,12 @@
 
 .name {
     @include font-size(30px);
+}
+
+// food type icon
+.foodTypeIcon {
+    max-width: 35px;
+    position: absolute;
+    top: -$half-spacing;
+    left: -$half-spacing;
 }

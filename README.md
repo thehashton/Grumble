@@ -1,5 +1,5 @@
 # Eat
-### Helping users find places to eat near them.
+### Helping users find a place to eat near them.
 By Harry Ghazni
 
 Visit the demo

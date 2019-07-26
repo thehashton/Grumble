@@ -1,6 +1,6 @@
 # Eat
 ### Helping users find a place to eat near them.
-By Harry
+By Harry Ghazni
 
 Visit the demo
 https://eat.netlify.com/

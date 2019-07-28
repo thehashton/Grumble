@@ -13,5 +13,6 @@ module.exports = `
     addEatery(id: String, name: String!, address: String!, foodType: String!): Eatery
     editEatery(id: String, name: String, address: String, foodType: String): Eatery
     deleteEatery(id: String, name: String, address: String, foodType: String): Eatery
+    getFoodType(foodType: String): [Eatery]
   }
 `;

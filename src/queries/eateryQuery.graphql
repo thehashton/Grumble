@@ -1,0 +1,8 @@
+query eateriesQuery {
+    eateries {
+      id
+      name
+      address
+      foodType
+    }
+  }

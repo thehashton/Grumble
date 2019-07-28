@@ -43,7 +43,7 @@ mutation {
 >Add eatery
 ```
 mutation {
-  addUser(id: "1", name: "Delboys Rat Burgers", address: "Behind the spoons", foodType: "Burgers") {
+  addEatery(id: "1", name: "Delboys Rat Burgers", address: "Behind the spoons", foodType: "Burgers") {
     id
     name
     address

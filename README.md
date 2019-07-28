@@ -95,3 +95,15 @@ query {
   }
 }
 ```
+
+>Search Eateries (Food Type)
+```
+mutation{
+  getFoodType (foodType: "Italian") {
+    id
+    name
+    address
+    foodType
+  }
+}
+```

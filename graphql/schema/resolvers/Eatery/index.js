@@ -19,6 +19,16 @@ module.exports = {
           });
       });
     },
+    getFoodType: (_, args) => {
+      const { foodType } = args
+      return new Promise((resolve, reject) => {
+        return Eatery.find({ foodType })
+          .populate()
+          .exec((err, res) => {
+            err ? reject(err) : resolve(res)
+          })
+      })
+    },
   },
   Mutation: {
     addEatery: (root, { name, address, foodType }) => {
@@ -46,16 +56,6 @@ module.exports = {
           err ? reject(err) : resolve(res);
         });
       });
-    },
-    getFoodType: (_, args) => {
-      const { foodType } = args
-      return new Promise((resolve, reject) => {
-        return Eatery.find({ foodType })
-          .populate()
-          .exec((err, res) => {
-            err ? reject(err) : resolve(res)
-          })
-      })
     },
   }
 };

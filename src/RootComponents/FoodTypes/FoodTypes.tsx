@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import "./FoodTypes.scss";
 import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
@@ -28,19 +28,24 @@ const FOODTYPE_QUERY = gql`
   }
 `;
 
+type foodTypeFilterProps = {
+  foodTypeName: String;
+};
+
 export const FoodTypes: React.SFC = () => {
   return (
     <div className="food-types">
       <ul className="food-type-list">
-        <li className="food-type-item">Pizza</li>
-        <li className="food-type-item">Chicken</li>
-        <li className="food-type-item">Indian</li>
-        <li className="food-type-item">Chinese</li>
-        <li className="food-type-item">English</li>
-        <li className="food-type-item">Fish & Chips</li>
-        <li className="food-type-item">Kebab</li>
-        <li className="food-type-item">Curry</li>
-        <li className="food-type-item">Carribean</li>
+        <FoodTypeFilter foodTypeName={"Italian"} />
+        <FoodTypeFilter foodTypeName={"Pizza"} />
+        <FoodTypeFilter foodTypeName={"Chicken"} />
+        <FoodTypeFilter foodTypeName={"Indian"} />
+        <FoodTypeFilter foodTypeName={"Chinese"} />
+        <FoodTypeFilter foodTypeName={"English"} />
+        <FoodTypeFilter foodTypeName={"Fish & Chips"} />
+        <FoodTypeFilter foodTypeName={"Kebab"} />
+        <FoodTypeFilter foodTypeName={"Curry"} />
+        <FoodTypeFilter foodTypeName={"Caribbean"} />
       </ul>
       <div className={"EateryWrapper"}>
         <ApolloProvider client={client}>
@@ -62,6 +67,24 @@ export const FoodTypes: React.SFC = () => {
         </ApolloProvider>
       </div>
     </div>
+  );
+};
+
+const FoodTypeFilter: React.FunctionComponent<foodTypeFilterProps> = props => {
+  const [foodType, setFoodType] = useState(props.foodTypeName);
+  return (
+    <li
+      className="food-type-item"
+      onClick={async () => {
+        const { data } = await client.query({
+          query: FOODTYPE_QUERY,
+          variables: { foodType: props.foodTypeName }
+        });
+        setFoodType(foodType);
+      }}
+    >
+      {foodType}
+    </li>
   );
 };
 

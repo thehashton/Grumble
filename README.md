@@ -43,7 +43,7 @@ mutation {
 >Add eatery
 ```
 mutation {
-  addUser(id: "1", name: "Delboys Rat Burgers", address: "Behind the spoons", foodType: "Burgers") {
+  addEatery(id: "1", name: "Delboys Rat Burgers", address: "Behind the spoons", foodType: "Burgers") {
     id
     name
     address
@@ -92,6 +92,18 @@ query {
     id
     name
     email
+  }
+}
+```
+
+>Search Eateries (Food Type)
+```
+mutation{
+  getFoodType (foodType: "Italian") {
+    id
+    name
+    address
+    foodType
   }
 }
 ```

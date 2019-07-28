@@ -17,6 +17,17 @@ const EATERY_QUERY = gql`
   }
 `;
 
+const FOODTYPE_QUERY = gql`
+  query foodTypeQuery($foodType: String!) {
+    getFoodType(foodType: $foodType) {
+      id
+      name
+      address
+      foodType
+    }
+  }
+`;
+
 export const FoodTypes: React.SFC = () => {
   return (
     <div className="food-types">

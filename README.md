@@ -98,7 +98,7 @@ query {
 
 >Search Eateries (Food Type)
 ```
-mutation{
+query {
   getFoodType (foodType: "Italian") {
     id
     name

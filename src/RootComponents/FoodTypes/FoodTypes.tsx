@@ -29,23 +29,28 @@ const FOODTYPE_QUERY = gql`
 `;
 
 type foodTypeFilterProps = {
-  foodTypeName: String;
+  foodTypeName: string;
+  setFoodType(arg: string): void;
 };
 
 export const FoodTypes: React.SFC = () => {
+  const [foodType, setFoodType] = useState("");
   return (
     <div className="food-types">
       <ul className="food-type-list">
-        <FoodTypeFilter foodTypeName={"Italian"} />
-        <FoodTypeFilter foodTypeName={"Pizza"} />
-        <FoodTypeFilter foodTypeName={"Chicken"} />
-        <FoodTypeFilter foodTypeName={"Indian"} />
-        <FoodTypeFilter foodTypeName={"Chinese"} />
-        <FoodTypeFilter foodTypeName={"English"} />
-        <FoodTypeFilter foodTypeName={"Fish & Chips"} />
-        <FoodTypeFilter foodTypeName={"Kebab"} />
-        <FoodTypeFilter foodTypeName={"Curry"} />
-        <FoodTypeFilter foodTypeName={"Caribbean"} />
+        <FoodTypeFilter foodTypeName={"Italian"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Pizza"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Chicken"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Indian"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Chinese"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"English"} setFoodType={setFoodType} />
+        <FoodTypeFilter
+          foodTypeName={"Fish & Chips"}
+          setFoodType={setFoodType}
+        />
+        <FoodTypeFilter foodTypeName={"Kebab"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Curry"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Caribbean"} setFoodType={setFoodType} />
       </ul>
       <div className={"EateryWrapper"}>
         <ApolloProvider client={client}>
@@ -54,13 +59,17 @@ export const FoodTypes: React.SFC = () => {
               if (loading) return "Loading...";
               const { eateries } = data;
               return eateries.map((eatery: any) => (
-                <EateryItem
-                  key={eatery.id}
-                  id={eatery.id}
-                  name={eatery.name}
-                  address={eatery.address}
-                  foodType={eatery.foodType}
-                />
+                <>
+                  {eatery.foodType === foodType && (
+                    <EateryItem
+                      key={eatery.id}
+                      id={eatery.id}
+                      name={eatery.name}
+                      address={eatery.address}
+                      foodType={eatery.foodType}
+                    />
+                  )}
+                </>
               ));
             }}
           </Query>
@@ -71,7 +80,6 @@ export const FoodTypes: React.SFC = () => {
 };
 
 const FoodTypeFilter: React.FunctionComponent<foodTypeFilterProps> = props => {
-  const [foodType, setFoodType] = useState(props.foodTypeName);
   return (
     <li
       className="food-type-item"
@@ -80,10 +88,10 @@ const FoodTypeFilter: React.FunctionComponent<foodTypeFilterProps> = props => {
           query: FOODTYPE_QUERY,
           variables: { foodType: props.foodTypeName }
         });
-        setFoodType(foodType);
+        props.setFoodType(props.foodTypeName);
       }}
     >
-      {foodType}
+      {props.foodTypeName}
     </li>
   );
 };

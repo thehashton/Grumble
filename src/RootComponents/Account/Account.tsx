@@ -78,10 +78,6 @@ export default class Account extends Component {
             <div className="avatar" title="avatar">
               <img src={blankAvatar} alt="avatar" />
             </div>
-            <div
-              onClick={this.toggleSidebar}
-              className={`sidebar-minimise`}
-            ></div>
             <ul className={"side-menu"}>
               <li
                 className="side-menu__item"

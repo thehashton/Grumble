@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./FoodTypes.scss";
 import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";

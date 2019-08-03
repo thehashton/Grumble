@@ -72,26 +72,6 @@
     width: $base-spacing;
     justify-content: center;
   }
-
-  .sidebar-minimise {
-    display: none;
-  }
-}
-
-.sidebar-minimise {
-  &:after {
-    display: block;
-    position: absolute;
-    right: $half-spacing;
-    top: $half-spacing;
-    content: "<";
-    @include font-size(32px);
-    padding: $base-spacing;
-    color: $color-white;
-  }
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .sidebar.minimized {

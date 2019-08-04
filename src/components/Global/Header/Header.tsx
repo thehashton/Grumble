@@ -4,7 +4,7 @@ import { NavLink, Switch, Route } from "react-router-dom";
 
 const Header = (props: any) => {
   return (
-    <div className={"header"}>
+    <header className={"header"}>
       <div className={"logo"}>
         <NavLink exact to="/" activeClassName="active">
           <h1>EAT</h1>
@@ -39,7 +39,7 @@ const Header = (props: any) => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </header>
   );
 };
 export default Header;

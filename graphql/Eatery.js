@@ -20,6 +20,10 @@ const EaterySchema = new Schema({
   foodType: {
     type: String,
     required: true
+  },
+  creator: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 

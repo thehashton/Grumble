@@ -4,10 +4,21 @@ import "./Login.scss";
 export const Login: React.FunctionComponent = () => {
   return (
     <form className="login">
-      <span className={"label"}>Email:</span>
-      <input type="email" placeholder={"Email address"} />
-      <span className={"label"}>Password:</span>
-      <input type="password" placeholder={"Enter password"} />
+      <div className="form-control">
+        <label className={"label"} htmlFor={"email"}>
+          Email:
+        </label>
+        <input type="email" placeholder={"Email address"} id={"email"} />
+      </div>
+      <div className="form-control">
+        <label className={"label"} htmlFor={"password"}>
+          Password:
+        </label>
+        <input type="password" placeholder={"Enter password"} />
+      </div>
+      <button type={"button"} className={"button"}>
+        Signup
+      </button>
       <button type={"submit"} className={"button"}>
         Login
       </button>

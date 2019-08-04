@@ -3,15 +3,12 @@ import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import store from "../runtime/store/store";
-import { submitEatery } from "../runtime/store/actions";
-
 import Home from "./RootComponents/Home";
 import Header from "./components/Global/Header";
 import About from "./RootComponents/About";
-import Account from "./RootComponents/Account";
 import FAQ from "./RootComponents/FAQ";
 import Contact from "./RootComponents/Contact";
+import { AuthPage } from "./pages/AuthPage/AuthPage";
 
 class App extends Component {
   render() {
@@ -19,7 +16,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <Header />
-          <div className={"container"}>
+          <main className={"container"}>
             <React.Fragment>
               <Route
                 render={({ location }) => (
@@ -32,7 +29,7 @@ class App extends Component {
                       <Switch location={location}>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
-                        <Route path="/account" component={Account} />
+                        <Route path="/account" component={AuthPage} />
                         <Route path="/faq" component={FAQ} />
                         <Route path="/contact" component={Contact} />
                       </Switch>
@@ -41,7 +38,7 @@ class App extends Component {
                 )}
               />
             </React.Fragment>
-          </div>
+          </main>
         </div>
       </div>
     );

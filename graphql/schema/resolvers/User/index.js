@@ -21,8 +21,8 @@ module.exports = {
     }
   },
   Mutation: {
-    addUser: (root, { id, name, email }) => {
-      const newUser = new User({ id, name, email });
+    createUser: (root, { id, email, password }) => {
+      const newUser = new User({ id, email, password });
 
       return new Promise((resolve, reject) => {
         newUser.save((err, res) => {
@@ -30,9 +30,9 @@ module.exports = {
         });
       });
     },
-    editUser: (root, { id, name, email }) => {
+    editUser: (root, { id, email, password }) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndUpdate({ id }, { $set: { name, email } }).exec(
+        User.findOneAndUpdate({ id }, { $set: { email, password } }).exec(
           (err, res) => {
             err ? reject(err) : resolve(res);
           }

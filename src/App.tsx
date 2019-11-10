@@ -32,6 +32,7 @@ class App extends Component {
                         <Route path="/account" component={AuthPage} />
                         <Route path="/faq" component={FAQ} />
                         <Route path="/contact" component={Contact} />
+                        <Route component={NoRoutePage} />
                       </Switch>
                     </CSSTransition>
                   </TransitionGroup>
@@ -44,5 +45,7 @@ class App extends Component {
     );
   }
 }
+
+const NoRoutePage: React.FC = () => <p>404</p>;
 
 export default App;

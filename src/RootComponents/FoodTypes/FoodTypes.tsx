@@ -50,7 +50,8 @@ export const FoodTypes: React.SFC = () => {
         />
         <FoodTypeFilter foodTypeName={"Kebab"} setFoodType={setFoodType} />
         <FoodTypeFilter foodTypeName={"Curry"} setFoodType={setFoodType} />
-        <FoodTypeFilter foodTypeName={"Caribbean"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Carribean"} setFoodType={setFoodType} />
+        <FoodTypeFilter foodTypeName={"Vietnamese"} setFoodType={setFoodType} />
       </ul>
       <div className={"EateryWrapper"}>
         <ApolloProvider client={client}>
@@ -58,6 +59,7 @@ export const FoodTypes: React.SFC = () => {
             {({ loading, data }: any) => {
               if (loading) return "Loading...";
               const { eateries } = data;
+
               return eateries.map((eatery: any) => (
                 <>
                   {eatery.foodType === foodType && (

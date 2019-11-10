@@ -13,10 +13,8 @@
 }
 
 .dialog {
-  border: 4px dashed rgba(47, 144, 189, 0.411);
-  border-radius: $half-spacing;
   padding: $base-spacing;
-  background: $color-base;
+  background: $color-primary;
 }
 
 .dialogClose {

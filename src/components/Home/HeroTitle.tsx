@@ -13,7 +13,7 @@ export const HeroTitle: React.SFC = () => {
   return (
     <div className="home-wrapper hero">
       <h1 id="hero-title">{message}</h1>
-      <p>Let's find you a place to eat</p>
+      <p>Let's find you a place to eat in Nottingham</p>
     </div>
   );
 };

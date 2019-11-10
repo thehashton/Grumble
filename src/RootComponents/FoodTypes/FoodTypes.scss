@@ -11,11 +11,9 @@
 
 .food-type-item {
   padding: $base-spacing * 2 $half-spacing/2;
-  border: 1px dashed rgba(47, 144, 189, 0.411);
 
   &:hover {
     background-color: rgba(47, 144, 189, 0.411);
-    border: 1px dashed $color-white;
     cursor: pointer;
   }
 }
@@ -32,5 +30,9 @@ h3 {
 
 .EateryWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include media-query(min, $lap-start) {
+    grid-template-columns: 1fr 1fr;
+  }
 }

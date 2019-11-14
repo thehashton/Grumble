@@ -78,6 +78,9 @@ export const SearchResults = (props: any) => {
         <Highlight key={props.id} attribute="name" hit={props.hit} />
       </p>
       <p>
+        <Highlight key={props.id} attribute="address" hit={props.hit} />
+      </p>
+      <p>
         <Highlight key={props.id} attribute="foodType" hit={props.hit} />
       </p>
     </article>

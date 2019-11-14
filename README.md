@@ -1,8 +1,8 @@
 <p align="center">
-    <img src="https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png" alt="Grumble" />
+<img src="https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png" alt="Grumble" />
+<br>
+    <span style="text-align: center">Helping users find a place to eat near them.</span>
 </p>
-### Helping users find a place to eat near them.
-By Harry Ghazni
 
 **Visit the demo**
 https://eat.netlify.com/

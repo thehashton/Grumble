@@ -43,7 +43,7 @@ export const Search: React.FunctionComponent = () => {
         <Hits hitComponent={SearchResults} />
       </div>
     ) : (
-      <div>No query</div>
+      <div className={"noQuery"}>No Query</div>
     )
   );
 

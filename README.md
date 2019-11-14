@@ -1,4 +1,4 @@
-![alt Grumble](https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png)
+![alt Grumble](https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png){margin: auto}
 ### Helping users find a place to eat near them.
 By Harry Ghazni
 

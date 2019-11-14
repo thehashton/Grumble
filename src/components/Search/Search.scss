@@ -36,8 +36,7 @@
 }
 
 .search-item {
-    display: flex;
-    justify-content: center;
+    display: block;
     margin: auto;
     border: 1px solid rgb(126, 126, 126);
     border-radius: $half-spacing/2;
@@ -63,4 +62,10 @@
 
 .noQuery {
     display: none;
+}
+
+.ais-SearchBox-form {
+    display: flex;
+    max-width: 400px;
+    margin: auto;
 }

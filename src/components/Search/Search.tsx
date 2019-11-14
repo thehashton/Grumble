@@ -25,10 +25,8 @@ const EATERY_QUERY = gql`
   }
 `;
 
-const searchClient = algoliasearch(
-  "EALR2V1LWB",
-  "c57937790492fbff9353e34c083da0da"
-);
+const keys = require("../../../keys.json");
+const searchClient = algoliasearch(keys.id, keys.key);
 
 const fetchDataFromDatabase = () => {
   const eateries = EATERY_QUERY;

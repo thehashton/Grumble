@@ -8,7 +8,8 @@
 
     button {
         position: relative;
-        height: 46px;
+        height: 66px;
+        padding: $base-spacing;
         top: -1px;
         left: -5px;
         border-top-right-radius: $half-spacing;
@@ -23,12 +24,14 @@
     }
 
     input {
-        height: $base-spacing*2;
+        height: $base-spacing*3;
         border-top-left-radius: $half-spacing;
         border-bottom-left-radius: $half-spacing;
         border: 2px solid $color-primary-light;
         background: $color-primary;
         padding-left: $base-spacing;
+        max-width: 400px;
+        width: 100%;
     }
 }
 

@@ -1,4 +1,6 @@
-![alt Grumble](https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png){margin: auto}
+<p align="center">
+    <img src="https://github.com/hghazni/Grumble/blob/master/src/assets/images/grumble-logo-black.png" alt="Grumble" />
+</p>
 ### Helping users find a place to eat near them.
 By Harry Ghazni
 

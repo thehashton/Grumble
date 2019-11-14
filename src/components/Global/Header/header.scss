@@ -49,6 +49,16 @@
       margin: $half-spacing;
     }
   }
+
+  img {
+    max-width: 200px;
+    margin-top: $base-spacing;
+
+    @include media-query(min, $lap-start) {
+      margin-left: $base-spacing*2;
+      margin-top: 0;
+    }
+  }
 }
 
 .menu {

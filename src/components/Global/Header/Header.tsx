@@ -7,7 +7,11 @@ const Header = (props: any) => {
     <header className={"header"}>
       <div className={"logo"}>
         <NavLink exact to="/" activeClassName="active">
-          <h1>EAT</h1>
+          <img
+            className={"logo"}
+            src={"../../assets/images/grumble_logo.png"}
+            alt=""
+          />
           <span>Alpha</span>
         </NavLink>
       </div>

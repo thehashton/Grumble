@@ -9,10 +9,14 @@ import Search from "../../components/Search/Search";
 export const Home: React.SFC = () => {
   return (
     <div className={"Home"}>
-      <HeroLogo />
-      <HeroTitle />
-      <Search />
-      <Buttons />
+      <div className={"Home__column-left"}>
+        <HeroTitle />
+        <HeroLogo />
+      </div>
+      <div className={"Home__column-right"}>
+        <Search />
+        <Buttons />
+      </div>
     </div>
   );
 };

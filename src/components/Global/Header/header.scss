@@ -5,10 +5,9 @@
   justify-content: space-between;
   width: 100%;
   position: fixed;
-  padding: $base-spacing;
-  top: 0;
+  min-height: 80px;
   background-color: $color-primary;
-  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.15);
+  top: 0;
 
   @media (min-width: $lap-start) {
     flex-direction: row;
@@ -17,6 +16,10 @@
 
 .logo {
   position: relative;
+
+  @include media-query(min, $lap-start) {
+    padding-left: $base-spacing;
+  }
 
   a {
     display: flex;
@@ -71,6 +74,8 @@
 }
 
 .menu__item {
+  text-transform: lowercase;
+
   @media only screen and (min-width: $lap-start) {
     padding-right: $base-spacing;
   }
@@ -78,10 +83,11 @@
 
 .menu__link {
   display: flex;
+  align-items: center;
   text-decoration: none;
+  padding: 0 $base-spacing;
   color: $color-white;
-  height: 100%;
-  padding: 22px;
+  height: 80px;
   @include font-size(18px);
 
   @media screen and (min-width: $lap-start) {
@@ -89,7 +95,7 @@
   }
 
   &:hover {
-    background-color: darken($color-primary, 20%);
+    background-color: $color-highlight;
     box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
   }
 }

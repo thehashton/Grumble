@@ -64,7 +64,7 @@ export default class Buttons extends Component {
           buttonText="Travel To"
         />
 
-        {/* <Button
+        <Button
           onClick={() =>
             this.setState({
               travelToOpen: false,
@@ -75,7 +75,7 @@ export default class Buttons extends Component {
           }
           className={`addEatery ${addEatery ? `active` : ``}`}
           buttonText="+"
-        /> */}
+        />
 
         <Dialog
           isOpen={this.state.foodTypesOpen}

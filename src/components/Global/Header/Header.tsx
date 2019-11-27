@@ -15,7 +15,6 @@ const Header = (props: any) => {
           <span>Alpha</span>
         </NavLink>
       </div>
-
       <ul className={"menu"}>
         <li className={"menu__item"}>
           <NavLink

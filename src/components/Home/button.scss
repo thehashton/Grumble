@@ -12,7 +12,11 @@
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(56, 58, 161);
+    background-color: $color-highlight;
+
+    &.addEatery {
+      background-color: darken($color-highlight, 20%);
+    }
   }
 
   &:active {
@@ -26,7 +30,14 @@
   background: $color-highlight;
 }
 
-.random-choice,
 .travel-to {
-  display: none;
+  // display: none;
+}
+
+.hero-logo {
+  padding: $base-spacing*2;
+}
+
+.hero-logo__img {
+  max-width: 150px;
 }

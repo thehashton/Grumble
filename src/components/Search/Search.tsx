@@ -13,6 +13,7 @@ import {
 
 import { client } from "../..";
 import "./Search.scss";
+import { EateryItem } from "../../RootComponents/Eatery/EateryItem";
 
 const EATERY_QUERY = gql`
   {
@@ -73,17 +74,13 @@ export const Search: React.FunctionComponent = () => {
 
 export const SearchResults = (props: any) => {
   return (
-    <article className="search-item">
-      <p>
-        <Highlight key={props.id} attribute="name" hit={props.hit} />
-      </p>
-      <p>
-        <Highlight key={props.id} attribute="address" hit={props.hit} />
-      </p>
-      <p>
-        <Highlight key={props.id} attribute="foodType" hit={props.hit} />
-      </p>
-    </article>
+    <EateryItem
+      key={props.id}
+      id={props.id}
+      name={props.hit.name}
+      address={props.hit.address}
+      foodType={props.hit.foodType}
+    />
   );
 };
 

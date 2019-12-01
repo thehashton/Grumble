@@ -26,7 +26,14 @@ export default class Buttons extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div
+        className={`lowerOptions
+      ${
+        foodTypesOpen || randomChoiceOpen || travelToOpen || addEatery
+          ? `active`
+          : ``
+      }`}
+      >
         <Button
           onClick={() =>
             this.setState({
@@ -51,7 +58,7 @@ export default class Buttons extends Component {
           className={`random-choice ${randomChoiceOpen ? `active` : ``}`}
           buttonText="Random"
         />
-        <Button
+        {/* <Button
           onClick={() =>
             this.setState({
               travelToOpen: true,
@@ -62,7 +69,7 @@ export default class Buttons extends Component {
           }
           className={`travel-to ${travelToOpen ? `active` : ``}`}
           buttonText="Travel To"
-        />
+        /> */}
 
         <Button
           onClick={() =>

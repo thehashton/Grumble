@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 100%;
-  padding-top: $base-spacing * 10;
+  padding-top: $base-spacing * 5;
   @media screen and (min-width: $lap-start) {
     padding-top: $base-spacing * 6;
   }

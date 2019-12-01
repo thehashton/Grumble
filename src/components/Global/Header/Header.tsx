@@ -15,7 +15,7 @@ const Header = (props: any) => {
           <span>Alpha</span>
         </NavLink>
       </div>
-      <ul className={"menu"}>
+      {/* <ul className={"menu"}>
         <li className={"menu__item"}>
           <NavLink
             exact
@@ -41,7 +41,7 @@ const Header = (props: any) => {
             Contact
           </NavLink>
         </li>
-      </ul>
+      </ul> */}
     </header>
   );
 };

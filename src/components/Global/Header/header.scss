@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: $half-spacing;
   width: 100%;
   position: fixed;
   min-height: 80px;
@@ -16,6 +17,7 @@
 
 .logo {
   position: relative;
+  margin: 0;
 
   @include media-query(min, $lap-start) {
     padding-left: $base-spacing;
@@ -56,11 +58,11 @@
 
   img {
     max-width: 200px;
-    margin-top: $base-spacing;
+    margin-top: 0;
 
     @include media-query(min, $lap-start) {
       margin-left: $base-spacing*2;
-      margin-top: 0;
+      margin-top: $base-spacing;
     }
   }
 }

@@ -115,6 +115,13 @@ export default class Buttons extends Component {
         >
           <AddEatery />
         </Dialog>
+        <div
+          className={`siteOverlay ${
+            foodTypesOpen || randomChoiceOpen || travelToOpen || addEatery
+              ? `active`
+              : ``
+          }`}
+        ></div>
       </div>
     );
   }

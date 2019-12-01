@@ -4,7 +4,7 @@
 }
 
 .search {
-    margin: 0 $half-spacing $base-spacing*10 $half-spacing;
+    margin: 0 $half-spacing $base-spacing $half-spacing;
 
     button {
         position: relative;
@@ -50,7 +50,11 @@
 
 // list
 .ais-Hits-list {
-    margin: 20px 0;
+    margin: $base-spacing 0 $base-spacing*10 0;
+
+    @include media-query(min, $lap-start) {
+        margin: $base-spacing 0 $base-spacing 0;
+    }
 }
 
 // item

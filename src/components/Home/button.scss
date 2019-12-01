@@ -57,8 +57,8 @@
   }
 
   &.active {
-    height: 100%;
     position: relative;
+    padding-bottom: 20vh;
   }
 }
 
@@ -67,5 +67,24 @@
 
   @include media-query(min, $lap-start) {
     @include font-size(50px);
+  }
+}
+
+.siteOverlay {
+  display: none;
+
+  &.active {
+    display: none;
+
+    @include media-query(min, $lap-start) {
+      z-index: 0;
+      display: block;
+      background: #000000da;
+      width: 100%;
+      height: 200vh;
+      left: 0;
+      top: -100vh;
+      position: absolute;
+    }
   }
 }

@@ -6,7 +6,7 @@ tasks:
 
     start:
       adaptor: sh
-      command: 'npm run start'
+      command: 'npm-run-all --parallel server start'
 
     graphql:
       adaptor: sh

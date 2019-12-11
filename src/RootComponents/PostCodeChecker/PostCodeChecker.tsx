@@ -15,7 +15,6 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
   const [state, setState] = React.useState({
     userPostCode: ""
   });
-  let postCodeSimple = JSON.stringify(state.userPostCode);
 
   function handleChange(evt: any) {
     setState({ userPostCode: evt.target.value });
@@ -23,8 +22,9 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
 
   function submitPostCode(event: any) {
     event.preventDefault();
-    store.dispatch(setPostCode(postCodeSimple));
-    console.log(store.getState());
+    store.dispatch(setPostCode(state.userPostCode));
+    localStorage.setItem("postCode", state.userPostCode);
+    console.log(localStorage.getItem("postCode"));
   }
 
   // Make a request for a postcode

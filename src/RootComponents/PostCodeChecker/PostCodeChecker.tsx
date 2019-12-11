@@ -39,9 +39,6 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
     })
     .finally(function() {
       // always executed
-      /* ---------------------------z---------
-    Should I include redux dispatch() here?
-    ------------------------------------ */
     });
 
   return (

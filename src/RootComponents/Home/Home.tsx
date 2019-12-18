@@ -5,6 +5,7 @@ import Buttons from "../../components/Home/Buttons";
 import HeroLogo from "../../components/Home/HeroLogo";
 import HeroTitle from "../../components/Home/HeroTitle";
 import Search from "../../components/Search/Search";
+import PostCodeChecker from "../../RootComponents/PostCodeChecker";
 
 export const Home: React.SFC = () => {
   return (
@@ -16,6 +17,7 @@ export const Home: React.SFC = () => {
       <div className={"Home__column-right"}>
         <Search />
         <Buttons />
+        <PostCodeChecker />
       </div>
     </div>
   );

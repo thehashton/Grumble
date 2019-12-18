@@ -1,0 +1,10 @@
+.Location {
+
+    & img {
+        max-width: 80px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

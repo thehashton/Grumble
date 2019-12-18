@@ -3,13 +3,9 @@ import "./PostCodeChecker.scss";
 import axios from "axios";
 import store from "../../../runtime/store/store";
 import { setPostCode } from "../../../runtime/store/actions";
+import Locator from "../../components/Global/Locator";
 
-type PostCodeCheckerProps = {
-  postCode?: string;
-  userLocation?: {};
-};
-
-export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
+export const PostCodeChecker: React.FC = () => {
   const usersPostcode = localStorage.getItem("postCode");
   const [state, setState] = React.useState({
     userPostCode: ""
@@ -17,12 +13,6 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
 
   function handleChange(evt: any) {
     setState({ userPostCode: evt.target.value });
-  }
-
-  function submitPostCode(event: any) {
-    event.preventDefault();
-    store.dispatch(setPostCode(state.userPostCode));
-    localStorage.setItem("postCode", state.userPostCode);
   }
 
   let userLocObj: any = {};
@@ -50,6 +40,12 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
       // always executed
     });
 
+  function submitPostCode(event: any) {
+    event.preventDefault();
+    store.dispatch(setPostCode(state.userPostCode));
+    localStorage.setItem("postCode", state.userPostCode);
+  }
+
   return (
     <form action="" onSubmit={submitPostCode} className={"PostCodeChecker"}>
       <input
@@ -61,6 +57,7 @@ export const PostCodeChecker: React.SFC<PostCodeCheckerProps> = props => {
       <button className={"button"} type="submit">
         Check
       </button>
+      <Locator />
     </form>
   );
 };

@@ -1,7 +1,6 @@
 .Eatery {
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr;
     margin: $base-spacing;
     background: $color-primary;
     color: $color-white;
@@ -16,14 +15,6 @@
 
     p {
         background-color: $color-secondary-dark;
-    }
-
-    p:first-of-type {
-        padding: $base-spacing $base-spacing 0 $base-spacing;
-    }
-
-    p:nth-of-type(2) {
-        padding: 0 $base-spacing $half-spacing $base-spacing;
     }
 }
 

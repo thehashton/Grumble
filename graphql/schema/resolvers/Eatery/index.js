@@ -31,8 +31,8 @@ module.exports = {
     },
   },
   Mutation: {
-    addEatery: (root, { name, address, foodType }) => {
-      const newEatery = new Eatery({ name, address, foodType });
+    addEatery: (root, { name, description, address, city, postCode, phoneNumber, businessHours, foodType, veganFriendly, vegetarianFriendly, halal, kosher, dogFriendly, childFriendly, ethical, alcohol, price, website }) => {
+      const newEatery = new Eatery({ name, description, address, city, postCode, phoneNumber, businessHours, foodType, veganFriendly, vegetarianFriendly, halal, kosher, dogFriendly, childFriendly, ethical, alcohol, price, website });
 
       return new Promise((resolve, reject) => {
         newEatery.save((err, res) => {
@@ -40,11 +40,11 @@ module.exports = {
         });
       });
     },
-    editEatery: (root, { id, name, address, foodType }) => {
+    editEatery: (root, { id, name, description, address, city, postCode, phoneNumber, businessHours, foodType, veganFriendly, vegetarianFriendly, halal, kosher, dogFriendly, childFriendly, ethical, alcohol, price, website }) => {
       return new Promise((resolve, reject) => {
         Eatery.findOneAndUpdate(
           { id },
-          { $set: { name, address, foodType } }
+          { $set: { name, description, address, city, postCode, phoneNumber, businessHours, foodType, veganFriendly, vegetarianFriendly, halal, kosher, dogFriendly, childFriendly, ethical, alcohol, price, website } }
         ).exec((err, res) => {
           err ? reject(err) : resolve(res);
         });

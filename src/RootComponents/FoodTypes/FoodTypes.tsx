@@ -102,6 +102,12 @@ export const FoodTypes: React.FC = () => {
             {({ loading, data }: any) => {
               if (loading) return "Loading...";
               const { eateries } = data;
+
+              // sorts by distance
+              eateries.sort(
+                (a: any, b: any) =>
+                  parseFloat(a.distance) - parseFloat(b.distance)
+              );
               return eateries.map((eatery: any) => {
                 // User Location
                 axios

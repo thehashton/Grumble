@@ -1,7 +1,25 @@
 import React from "react";
+import MapDirections from "../MapDirections";
 import "./EateryItem.scss";
 
-export const EateryItem: React.SFC<any> = props => {
+type EateryItemProps = {
+  id?: any;
+  name?: any;
+  description?: any;
+  address?: any;
+  city?: any;
+  postCode?: any;
+  businessHours?: any;
+  foodType?: any;
+  dogFriendly?: any;
+  childFriendly?: any;
+  veganFriendly?: any;
+  vegetarianFriendly?: any;
+  distanceFromUser?: any;
+  onClick?: any;
+};
+
+export const EateryItem: React.FC<EateryItemProps> = props => {
   return (
     <div className="Eatery" key={props.id}>
       <h3 className="name">{props.name}</h3>
@@ -17,6 +35,10 @@ export const EateryItem: React.SFC<any> = props => {
       <p className="vegan">{props.veganFriendly}</p>
       <p className="vegaterian">{props.vegetarianFriendly}</p>
       <p className="distanceFromUser">{props.distanceFromUser} miles</p>
+      <MapDirections
+        eateryAddress={props.address}
+        eateryPostCode={props.postCode}
+      />
       {props.foodType && (
         <img
           className={"foodTypeIcon"}

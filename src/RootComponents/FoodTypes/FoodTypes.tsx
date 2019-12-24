@@ -4,10 +4,11 @@ import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
 import axios from "axios";
 import { getDistanceFromLatLonInKm } from "../../utils/distanceCalculator";
+export let eateryGlobalData = {};
 
 import { client } from "../..";
 import { EateryItem } from "../Eatery/EateryItem";
-let eateriesData: any = {};
+export let eateriesData: any = {};
 
 const EATERY_QUERY = gql`
   {
@@ -69,13 +70,8 @@ type foodTypeFilterProps = {
 
 export const FoodTypes: React.FC = () => {
   const [foodType, setFoodType] = useState("");
-  const usersPostcode = localStorage.getItem("postCode");
   const usersLatitude = localStorage.getItem("lat");
   const usersLongitude = localStorage.getItem("long");
-  const [state, setState] = React.useState({
-    userPostCode: "",
-    eateryPostCode: ""
-  });
 
   return (
     <div className="food-types">
@@ -109,6 +105,10 @@ export const FoodTypes: React.FC = () => {
                   parseFloat(a.distance) - parseFloat(b.distance)
               );
               return eateries.map((eatery: any) => {
+                eateryGlobalData = eatery;
+
+                // store.dispatch(setEateryPostCode(state.eateryPostCode));
+
                 // User Location
                 axios
                   .get("https://api.postcodes.io/postcodes/" + eatery.postCode)
@@ -119,6 +119,7 @@ export const FoodTypes: React.FC = () => {
                       eateryLocation: {
                         lat: eateryLocData.latitude,
                         long: eateryLocData.longitude,
+                        postCode: eateryLocData.postcode,
                         city: eateryLocData.nuts,
                         region: eateryLocData.region,
                         country: eateryLocData.country
@@ -145,7 +146,6 @@ export const FoodTypes: React.FC = () => {
                   .finally(function() {
                     // always executed
                   });
-
                 return (
                   <>
                     {eatery.foodType === foodType && (
@@ -179,6 +179,7 @@ export const FoodTypes: React.FC = () => {
                             : "Not Child friendly"
                         }
                         distanceFromUser={eatery.distance.toFixed(2)}
+                        onClick={eatery.address && eatery.postCode}
                       />
                     )}
                   </>

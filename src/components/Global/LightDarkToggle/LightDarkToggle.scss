@@ -1,0 +1,61 @@
+#switch[type=checkbox]{
+	height: 0;
+	width: 0;
+    visibility: hidden;
+}
+
+.switch-label {
+    cursor: pointer;
+	text-indent: -9999px;
+	width: 150px;
+	height: 40px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+}
+
+@include lightMode {
+    .switch-label {
+    border: 5px dashed white;
+    }
+}
+
+@include darkMode {
+    .switch-label {
+    border: 5px dashed black;
+    }
+}
+
+.switch-label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+    transition: 0.3s;
+}
+
+#switch:checked + .switch-label {
+	background: $color-primary-light;
+}
+
+#switch:checked + .switch-label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.switch-label:active:after {
+	width: 130px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms;
+//   transition-delay: 0ms;
+}

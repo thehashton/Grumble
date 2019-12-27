@@ -107,8 +107,6 @@ export const FoodTypes: React.FC = () => {
               return eateries.map((eatery: any) => {
                 eateryGlobalData = eatery;
 
-                // store.dispatch(setEateryPostCode(state.eateryPostCode));
-
                 // User Location
                 axios
                   .get("https://api.postcodes.io/postcodes/" + eatery.postCode)

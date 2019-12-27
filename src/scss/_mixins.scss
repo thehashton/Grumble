@@ -23,6 +23,26 @@
     @media only screen and (min-width: $wide-start) {
       @content;
     }
+  } @else if $type == "dark" {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  } @else if $type == "light" {
+    @media (prefers-color-scheme: light) {
+      @content;
+    }
+  }
+}
+
+@mixin darkMode {
+  html[data-theme='dark'] {
+    @content;
+  }
+}
+
+@mixin lightMode {
+  html[data-theme='light'] {
+    @content;
   }
 }
 

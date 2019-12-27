@@ -1,33 +1,33 @@
-.modal {
-  position: relative;
-  z-index: 1;
-
-  @include media-query(min, $lap-start) {
-    position: absolute;
-    top:-48vh;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-50%);
-    width: 95%;
-  }
-
-  @include media-query(min, $desk-start) {
-    max-width: $desk-start;
-  }
-}
-
-.dialog {
-  padding: $half-spacing;
-  background: $color-primary;
-  border: 1px solid transparent;
-  border-radius: $half-spacing/2;
-
-  @include media-query(max, $lap-start) {
+  .modal {
     position: relative;
-    top: -72.5vh;
-    min-height: 55vh;
+    z-index: 1;
+
+    @include media-query(min, $lap-start) {
+      position: absolute;
+      top:-45vh;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      transform: translate(-50%);
+      width: 95%;
+    }
+
+    @include media-query(min, $desk-start) {
+      max-width: $desk-start;
+    }
   }
-}
+
+  .dialog {
+    padding: $half-spacing;
+    background: $color-primary;
+    border: 1px solid transparent;
+    border-radius: $half-spacing/2;
+
+    @include media-query(max, $lap-start) {
+      position: relative;
+      top: 0;
+      min-height: 55vh;
+    }
+  }
 
 .dialogClose {
   position: absolute;

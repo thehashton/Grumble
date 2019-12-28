@@ -11,6 +11,8 @@ const EATERY_QUERY = gql`
       id
       name
       address
+      city
+      postCode
       foodType
     }
   }
@@ -36,6 +38,8 @@ export const Random: React.SFC = () => {
                 id={randomEatery.id}
                 name={randomEatery.name}
                 address={randomEatery.address}
+                city={randomEatery.city}
+                postCode={randomEatery.postCode}
                 foodType={randomEatery.foodType}
               />
             );

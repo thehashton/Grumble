@@ -1,5 +1,5 @@
 .toggle-themeName {
-	@include font-size($medium-font-size);
+	font-size: $medium-font-size;
 }
 
 #switch[type=checkbox]{
@@ -29,9 +29,9 @@
     .switch-label {
 	border: 3px solid $color-base;
 
-	&:after {
-		background: $color-base;
-	}
+		&:after {
+			background: $color-base;
+		}
     }
 }
 
@@ -65,5 +65,4 @@ html.transition *,
 html.transition *:before,
 html.transition *:after {
   transition: all 750ms;
-//   transition-delay: 0ms;
 }

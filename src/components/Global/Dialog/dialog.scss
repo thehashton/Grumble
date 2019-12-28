@@ -4,7 +4,7 @@
 
     @include media-query(min, $lap-start) {
       position: absolute;
-      top:-45vh;
+      top:-35vh;
       left: 50%;
       -webkit-transform: translate(-50%);
       transform: translate(-50%);

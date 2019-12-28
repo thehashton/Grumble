@@ -4,17 +4,19 @@ import axios from "axios";
 import store from "../../../runtime/store/store";
 import { setPostCode } from "../../../runtime/store/actions";
 import Locator from "../../components/Global/Locator";
-import {
-  userLocationCookie,
-  userPostCode
-} from "../../utils/userLocationCookie";
+import { userLocationCookie } from "../../utils/userLocationCookie";
 import { getCurrentPosition } from "../../utils/getCurrentPosition";
+
+// User Post Code from Local Storage
+export const userPostCode = localStorage.getItem("postCode");
 
 export const PostCodeChecker: React.FC = () => {
   const usersPostcode = localStorage.getItem("postCode");
   const [state, setState] = React.useState({
     userPostCode: ""
   });
+
+  const enterPostCode = () => {};
 
   function handleChange(evt: any) {
     setState({ userPostCode: evt.target.value });
@@ -60,7 +62,7 @@ export const PostCodeChecker: React.FC = () => {
   }
   return (
     <>
-      {userPostCode === null ? (
+      {localStorage.getItem("postCode") === "" ? (
         <form action="" onSubmit={submitPostCode} className={"PostCodeChecker"}>
           <input
             value={state.userPostCode}
@@ -68,7 +70,7 @@ export const PostCodeChecker: React.FC = () => {
             className={"input"}
             onChange={handleChange}
           />
-          <button className={"button"} type="submit">
+          <button className={"button"} onClick={enterPostCode} type="submit">
             Check
           </button>
           <Locator />

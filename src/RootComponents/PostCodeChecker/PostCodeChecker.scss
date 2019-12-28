@@ -2,8 +2,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .input {
+        color: black;
+        height: 35px;
+    }
+
+    .button {
+        height: 30px;
+        margin: 0;
+        text-align: center;
+        line-height: 0;
+    }
+
+    .Location, .Location img {
+        height: 45px;
+        background: none;
+        border: 0;
+        padding: 0;
+    }
 }
 
-.input {
-    color: black;
-}

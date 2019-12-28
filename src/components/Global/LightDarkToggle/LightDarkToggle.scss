@@ -1,3 +1,7 @@
+.toggle-themeName {
+	@include font-size($medium-font-size);
+}
+
 #switch[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -7,36 +11,40 @@
 .switch-label {
     cursor: pointer;
 	text-indent: -9999px;
-	width: 150px;
-	height: 40px;
+	width: 75px;
+	height: 25px;
 	background: grey;
 	display: block;
-	border-radius: 100px;
+	border-radius: $base-spacing * 5;
     position: relative;
 }
 
 @include lightMode {
     .switch-label {
-    border: 5px dashed white;
+    border: 3px solid $color-white;
     }
 }
 
 @include darkMode {
     .switch-label {
-    border: 5px dashed black;
+	border: 3px solid $color-base;
+
+	&:after {
+		background: $color-base;
+	}
     }
 }
 
 .switch-label:after {
 	content: '';
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
+	top: $half-spacing / 4;
+	left: $half-spacing / 2;
+	width: $base-spacing;
+	height: $base-spacing;
+	background: $color-white;
 	border-radius: 90px;
-    transition: 0.3s;
+	transition: 0.3s;
 }
 
 #switch:checked + .switch-label {
@@ -49,7 +57,7 @@
 }
 
 .switch-label:active:after {
-	width: 130px;
+	width: $base-spacing;
 }
 
 html.transition,

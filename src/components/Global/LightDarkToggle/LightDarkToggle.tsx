@@ -1,18 +1,6 @@
 import React from "react";
 import "./LightDarkToggle.scss";
 
-const inputToggle = (event: any) => {
-  if (event.target.checked) {
-    // checked
-    trans();
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    // unchecked
-    trans();
-    document.documentElement.setAttribute("data-theme", "light");
-  }
-};
-
 let trans = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
@@ -21,10 +9,29 @@ let trans = () => {
 };
 
 export const LightDarkToggle: React.FC = () => {
+  const [state, setState] = React.useState({
+    currentTheme: "Light"
+  });
+
+  const inputToggle = (event: any) => {
+    if (event.target.checked) {
+      // checked
+      trans();
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      // unchecked
+      trans();
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+    document.documentElement.getAttribute("data-theme") === "dark"
+      ? setState({ currentTheme: "Dark" })
+      : setState({ currentTheme: "Light" });
+  };
+
   return (
-    <div>
-      <p>Light and Dark Mode</p>
+    <>
       <div className="toggle-container">
+        <p className="toggle-themeName">{state.currentTheme}</p>
         <input
           onChange={inputToggle}
           type="checkbox"
@@ -33,7 +40,7 @@ export const LightDarkToggle: React.FC = () => {
         />
         <label htmlFor="switch" className="switch-label"></label>
       </div>
-    </div>
+    </>
   );
 };
 

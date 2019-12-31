@@ -16,17 +16,14 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
 
   const handleChange = (value?: any) => {
     state.newPostCode = value;
-    console.log(value);
   };
 
   const editingState = (e: any) => {
     setState({ editingState: true });
-    console.log(state.editingState);
   };
 
   const leavingEditingState = () => {
     setState({ editingState: false });
-    console.log(state.editingState);
   };
 
   const handleCrossEvent = () => {

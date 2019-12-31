@@ -62,7 +62,7 @@ export const PostCodeChecker: React.FC = () => {
   }
   return (
     <>
-      {localStorage.getItem("postCode") === "" ? (
+      {localStorage.getItem("postCode") === null ? (
         <form action="" onSubmit={submitPostCode} className={"PostCodeChecker"}>
           <input
             value={state.userPostCode}

@@ -126,7 +126,7 @@ export const FoodTypes: React.FC = () => {
                     Object.assign(eateriesData, eateryLocationRes);
 
                     // Calculates distance between user and eatery
-                    var eateryDistance =
+                    let eateryDistance =
                       getDistanceFromLatLonInKm(
                         Number(usersLatitude),
                         Number(usersLongitude),

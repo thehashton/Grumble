@@ -1,7 +1,6 @@
 import React from "react";
 import "./UsersPostCode.scss";
 import { getCurrentPosition } from "../../utils/getCurrentPosition";
-import { boolean } from "@storybook/addon-knobs";
 
 type UsersPostCodeProps = {
   userPostCode: any;

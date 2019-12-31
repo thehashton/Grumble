@@ -41,6 +41,7 @@ export const Random: React.SFC = () => {
                 city={randomEatery.city}
                 postCode={randomEatery.postCode}
                 foodType={randomEatery.foodType}
+                distanceFromUser={1.71}
               />
             );
           }}

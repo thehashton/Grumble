@@ -6,7 +6,6 @@ import Random from "../../RootComponents/Random";
 import TravelTo from "../../RootComponents/TravelTo";
 import Dialog from "../../components/Global/Dialog";
 import AddEatery from "../../RootComponents/AddEatery";
-
 import Button from "./Button";
 
 export default class Buttons extends Component {

@@ -1,5 +1,7 @@
 import React from "react";
 import "./button.scss";
+import "./HeroTitle.scss";
+import UsersPostCode from "./UsersPostCode";
 
 export const HeroTitle: React.SFC = () => {
   var msgArr = [];
@@ -13,8 +15,9 @@ export const HeroTitle: React.SFC = () => {
   return (
     <div className="home-wrapper hero">
       <h1 id="hero-title">{message}</h1>
-      <p>
-        Let's find you a place to eat near {localStorage.getItem("postCode")}
+      <p className="strapline">
+        Let's find you a place to eat near{" "}
+        <UsersPostCode userPostCode={localStorage.getItem("postCode")} />
       </p>
     </div>
   );

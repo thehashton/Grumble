@@ -1,0 +1,46 @@
+.UsersPostCode {
+    display: flex;
+    background: lightgrey;
+    border: 1px solid transparent;
+    border-radius: $half-spacing;
+    padding: $half-spacing/2;
+    max-width: 100px;
+    color: black;
+    margin-left: $half-spacing;
+    margin-top: $base-spacing;
+
+    @include media-query(min, $palm-start - 50) {
+        margin-top: 0;
+    }
+
+    &:hover, &:hover .userPostCodeInput {
+        background: darken(lightgrey, 20%);
+        cursor: pointer;
+    }
+
+    &.active {
+        max-width: 160px;
+    }
+}
+
+.userPostCodeInput {
+    max-width: 90px;
+    background: lightgrey;
+    text-align: center;
+    border: none;
+}
+
+.UsersPostCode__editingState {
+    display: flex;
+}
+
+.UsersPostCode__tick, .UsersPostCode__cross {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: $base-spacing;
+
+    &.active {
+        display: flex;
+    }
+}

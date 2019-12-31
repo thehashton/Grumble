@@ -9,15 +9,15 @@ import PostCodeChecker from "../../RootComponents/PostCodeChecker";
 export const Home: React.SFC = () => {
   return (
     <div className={"Home"}>
-      {localStorage.getItem("postCode") === "" ? (
+      {localStorage.getItem("postCode") === null ? (
+        <PostCodeChecker />
+      ) : (
         <>
           <HeroTitle />
           <HeroLogo />
           <Search />
           <Buttons />
         </>
-      ) : (
-        <PostCodeChecker />
       )}
     </div>
   );

@@ -5,7 +5,6 @@ import store from "../../../runtime/store/store";
 import { setPostCode } from "../../../runtime/store/actions";
 import Locator from "../../components/Global/Locator";
 import { userLocationCookie } from "../../utils/userLocationCookie";
-import { getCurrentPosition } from "../../utils/getCurrentPosition";
 
 // User Post Code from Local Storage
 export const userPostCode = localStorage.getItem("postCode");
@@ -25,7 +24,7 @@ export const PostCodeChecker: React.FC = () => {
   let userLocObj: any = {};
 
   axios
-    .get("https://api.postcodes.io/postcodes/" + usersPostcode)
+    .get("https://api.postcodes.io/postcodes/" + state.userPostCode)
     .then(function(userLocation) {
       // handle success
       const usrLocData = userLocation.data.result;
@@ -39,6 +38,8 @@ export const PostCodeChecker: React.FC = () => {
         }
       };
       Object.assign(userLocObj, userLocationRes);
+      localStorage.setItem("lat", userLocationRes.userLocation.lat);
+      localStorage.setItem("long", userLocationRes.userLocation.long);
     })
     .catch(function(error: any) {
       // handle error
@@ -53,12 +54,11 @@ export const PostCodeChecker: React.FC = () => {
     store.dispatch(setPostCode(state.userPostCode));
     localStorage.setItem("postCode", state.userPostCode);
     userLocationCookie(localStorage.getItem("postCode"));
-    getCurrentPosition();
 
     // Gives 5 seconds for lat/long to come back from postcodes.io API
     setTimeout(() => {
       location.reload();
-    }, 5000);
+    }, 3000);
   }
   return (
     <>

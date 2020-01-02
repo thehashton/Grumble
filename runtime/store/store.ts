@@ -6,7 +6,9 @@ export const initialState = {
     isLoggedIn: false,
     currentEateryPostCode: [],
     currentEateryAddress: [],
-    postCode: ""
+    postCode: "",
+    lat: "1.1",
+    long: "1.1"
 };
 
 const store = createStore(rootReducer, initialState);

@@ -1,6 +1,5 @@
 import React from "react";
 import "./UsersPostCode.scss";
-import { getCurrentPosition } from "../../utils/getCurrentPosition";
 
 type UsersPostCodeProps = {
   userPostCode: any;
@@ -8,9 +7,12 @@ type UsersPostCodeProps = {
 
 export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
   const [state, setState] = React.useState({
-    editingState: false,
     userPostCodeState: props.userPostCode,
     newPostCode: ""
+  });
+
+  const [editState, editSetState] = React.useState({
+    editingState: false
   });
 
   const handleChange = (value?: any) => {
@@ -18,11 +20,11 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
   };
 
   const editingState = (e: any) => {
-    setState({ editingState: true });
+    editSetState({ editingState: true });
   };
 
   const leavingEditingState = () => {
-    setState({ editingState: false });
+    editSetState({ editingState: false });
   };
 
   const handleCrossEvent = () => {
@@ -32,7 +34,6 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
 
   const handleTickEvent = () => {
     localStorage.setItem("postCode", state.newPostCode);
-    getCurrentPosition();
 
     // Gives 5 seconds for lat/long to come back from postcodes.io API
     setTimeout(() => {
@@ -42,7 +43,9 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
 
   return (
     <div
-      className={`UsersPostCode ` + `${state.editingState ? `active` : `NOT`}`}
+      className={
+        `UsersPostCode ` + `${editState.editingState ? `active` : `NOT`}`
+      }
     >
       <input
         type="text"
@@ -57,7 +60,8 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
       <div className={"UsersPostCode__editingState"}>
         <button
           className={
-            `UsersPostCode__tick ` + `${state.editingState ? `active` : `NOT`}`
+            `UsersPostCode__tick ` +
+            `${editState.editingState ? `active` : `NOT`}`
           }
           type={"button"}
           onClick={() => handleTickEvent()}
@@ -66,7 +70,8 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
         </button>
         <button
           className={
-            `UsersPostCode__cross ` + `${state.editingState ? `active` : `NOT`}`
+            `UsersPostCode__cross ` +
+            `${editState.editingState ? `active` : `NOT`}`
           }
           type={"button"}
           onClick={() => handleCrossEvent()}

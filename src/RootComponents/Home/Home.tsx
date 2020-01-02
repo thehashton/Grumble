@@ -6,6 +6,7 @@ import HeroLogo from "../../components/Home/HeroLogo";
 import HeroTitle from "../../components/Home/HeroTitle";
 import Search from "../../components/Search/Search";
 import PostCodeChecker from "../../RootComponents/PostCodeChecker";
+
 export const Home: React.SFC = () => {
   return (
     <div className={"Home"}>

@@ -55,19 +55,6 @@ export const Search: React.FunctionComponent = () => {
         {new Content(SearchResults)}
         <Configure hitsPerPage={20} />
       </InstantSearch>
-
-      <ApolloProvider client={client}>
-        <Query query={EATERY_QUERY}>
-          {({ loading, data }: any) => {
-            if (loading) return "Loading...";
-            const { eateries } = data;
-
-            return eateries.map((eatery: any) => (
-              <>{/* <p>{eatery.name}</p> */}</>
-            ));
-          }}
-        </Query>
-      </ApolloProvider>
     </div>
   );
 };

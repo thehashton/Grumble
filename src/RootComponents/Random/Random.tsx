@@ -6,6 +6,7 @@ import { ApolloProvider, Query } from "react-apollo";
 import { client } from "../..";
 import { EateryItem } from "../Eatery/EateryItem";
 import { getDistanceFromLatLonInKm } from "../../utils/distanceCalculator";
+const uuidv4 = require("uuid/v4");
 export let eateryGlobalData = {};
 
 const EATERY_QUERY = gql`
@@ -84,7 +85,7 @@ export const Random: React.SFC = () => {
 
             return (
               <EateryItem
-                key={randomEatery.id}
+                key={uuidv4()}
                 id={randomEatery.id}
                 name={randomEatery.name}
                 address={randomEatery.address}

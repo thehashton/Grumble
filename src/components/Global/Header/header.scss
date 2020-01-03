@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: $half-spacing;
+  padding: 20px;
   width: 100%;
   position: fixed;
   min-height: 80px;
-  background-color: $color-primary;
+  background-color: $color-dark-grey;
   top: 0;
   z-index: 3;
 
@@ -20,10 +20,6 @@
 .logo {
   position: relative;
   margin: 0;
-
-  @include media-query(min, $lap-start) {
-    padding-left: $base-spacing;
-  }
 
   a {
     display: flex;
@@ -61,11 +57,6 @@
   img {
     max-width: 200px;
     margin-top: 0;
-
-    @include media-query(min, $lap-start) {
-      margin-left: $base-spacing*2;
-      margin-top: $base-spacing;
-    }
   }
 }
 

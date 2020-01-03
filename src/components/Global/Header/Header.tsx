@@ -13,7 +13,6 @@ const Header = (props: any) => {
             src={"../../assets/images/grumble_logo.png"}
             alt=""
           />
-          <span>Alpha</span>
         </NavLink>
       </div>
       <LightDarkToggle />

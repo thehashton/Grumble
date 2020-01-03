@@ -4,10 +4,12 @@ import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
 import axios from "axios";
 import { getDistanceFromLatLonInKm } from "../../utils/distanceCalculator";
-export let eateryGlobalData = {};
-
 import { client } from "../..";
 import { EateryItem } from "../Eatery/EateryItem";
+const uuidv4 = require("uuid/v4");
+
+export let eateryGlobalData = {};
+
 export let eateriesData: any = {};
 
 const EATERY_QUERY = gql`
@@ -148,7 +150,7 @@ export const FoodTypes: React.FC = () => {
                   <>
                     {eatery.foodType === foodType && (
                       <EateryItem
-                        key={eatery.id}
+                        key={uuidv4()}
                         id={eatery.id}
                         name={eatery.name}
                         description={eatery.description}

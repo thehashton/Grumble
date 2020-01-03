@@ -180,6 +180,7 @@ export const FoodTypes: React.FC = () => {
                         }
                         distanceFromUser={eatery.distance.toFixed(2)}
                         onClick={eatery.address && eatery.postCode}
+                        foodType={eatery.foodType}
                       />
                     )}
                   </>

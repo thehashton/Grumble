@@ -9,6 +9,7 @@ import About from "./RootComponents/About";
 import FAQ from "./RootComponents/FAQ";
 import Contact from "./RootComponents/Contact";
 import { AuthPage } from "./pages/AuthPage/AuthPage";
+import WrongRoute from "./components/WrongRoute";
 
 class App extends Component {
   render() {
@@ -32,7 +33,7 @@ class App extends Component {
                         <Route path="/account" component={AuthPage} />
                         <Route path="/faq" component={FAQ} />
                         <Route path="/contact" component={Contact} />
-                        <Route component={NoRoutePage} />
+                        <Route component={WrongRoute} />
                       </Switch>
                     </CSSTransition>
                   </TransitionGroup>
@@ -46,6 +47,6 @@ class App extends Component {
   }
 }
 
-const NoRoutePage: React.FC = () => <p>404</p>;
+const NoRoutePage: React.FC = () => <></>;
 
 export default App;

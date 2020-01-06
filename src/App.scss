@@ -6,7 +6,7 @@ body {
 
 @include lightMode {
   body {
-    background: lightslategrey;
+    background: $theme-light-secondary;
   }
 }
 

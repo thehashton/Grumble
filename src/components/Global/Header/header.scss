@@ -17,6 +17,12 @@
   }
 }
 
+@include lightMode {
+  .header {
+    background-color: $theme-light-primary;
+  }
+}
+
 .logo {
   position: relative;
   margin: 0;

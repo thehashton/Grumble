@@ -14,7 +14,9 @@ export const HeroTitle: React.SFC = () => {
 
   return (
     <div className="home-wrapper hero">
-      <h1 id="hero-title">{message}</h1>
+      <h1 className={"heroTitle"} id="hero-title">
+        {message}
+      </h1>
       <div className="straplineWrapper">
         <p className="strapline">Let's find you a place to eat near </p>
         <UsersPostCode userPostCode={localStorage.getItem("postCode")} />

@@ -58,14 +58,6 @@
   }
 }
 
-#hero-title {
-  @include font-size(35px);
-
-  @include media-query(min, $lap-start) {
-    @include font-size(50px);
-  }
-}
-
 .siteOverlay {
   display: none;
 

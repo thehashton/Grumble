@@ -15,7 +15,6 @@ export const Home: React.SFC = () => {
       ) : (
         <>
           <HeroTitle />
-          <HeroLogo />
           <Search />
           <Buttons />
         </>

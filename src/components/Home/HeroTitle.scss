@@ -4,6 +4,14 @@
     flex-wrap: wrap;
 }
 
+.heroTitle {
+    @include font-size(55px);
+
+    @include media-query(min, $lap-start) {
+      @include font-size(70px);
+    }
+}
+
 .strapline {
     display: flex;
     justify-content: center;

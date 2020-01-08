@@ -1,15 +1,7 @@
   .modal {
     position: relative;
     z-index: 1;
-
-    @include media-query(min, $lap-start) {
-      position: absolute;
-      top:-35vh;
-      left: 50%;
-      -webkit-transform: translate(-50%);
-      transform: translate(-50%);
-      width: 95%;
-    }
+    margin: auto;
 
     @include media-query(min, $desk-start) {
       max-width: $desk-start;

@@ -17,6 +17,19 @@
   }
 }
 
+.logoText {
+  color: #fff;
+  font-family: $serif;
+  letter-spacing: -0.5px;
+  padding: 5px 20px;
+
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: 3px solid #ff8c00;
+  }
+}
+
 @include lightMode {
   .header {
     background-color: $theme-light-primary;

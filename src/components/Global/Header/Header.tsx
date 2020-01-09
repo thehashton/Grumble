@@ -8,11 +8,7 @@ const Header = (props: any) => {
     <header className={"header"}>
       <div className={"logo"}>
         <NavLink exact to="/" activeClassName="active">
-          <img
-            className={"logo"}
-            src={"../../assets/images/grumble_logo.png"}
-            alt=""
-          />
+          <h1 className="logoText">Grumble</h1>
         </NavLink>
       </div>
       <LightDarkToggle />

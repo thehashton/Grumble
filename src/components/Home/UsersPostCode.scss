@@ -1,6 +1,6 @@
 .UsersPostCode {
     display: flex;
-    background: lightgrey;
+    background: $theme-light-secondary;
     border: 1px solid transparent;
     border-radius: $half-spacing;
     padding: $half-spacing/2;
@@ -14,7 +14,7 @@
     }
 
     &:hover, &:hover .userPostCodeInput {
-        background: darken(lightgrey, 20%);
+        background: darken($theme-light-secondary, 20%);
         cursor: pointer;
     }
 
@@ -25,7 +25,7 @@
 
 .userPostCodeInput {
     max-width: 90px;
-    background: lightgrey;
+    background: $theme-light-secondary;
     text-align: center;
     border: none;
 }

@@ -24,10 +24,11 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
   };
 
   const leavingEditingState = () => {
-    editSetState({ editingState: false });
+    // editSetState({ editingState: false });
   };
 
   const handleCrossEvent = () => {
+    editSetState({ editingState: false });
     localStorage.removeItem("postCode");
     location.reload();
   };

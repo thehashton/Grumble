@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: $half-spacing $base-spacing;
+    line-height: $base-spacing*2;
 }
 
 .heroTitle {

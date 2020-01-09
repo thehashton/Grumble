@@ -1,7 +1,7 @@
 .toggle-container {
-	position: fixed;
-	top: $half-spacing/2;
-	right: $half-spacing/2;
+	position: absolute;
+	top: $half-spacing;
+	right: $base-spacing*2;
 }
 
 .toggle-themeName {

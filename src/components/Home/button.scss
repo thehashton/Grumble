@@ -1,6 +1,6 @@
 // General button style
 .button {
-  background-color: $color-primary-light;
+  background-color: $color-primary;
   padding: $base-spacing;
   border-color: transparent;
   border-radius: $half-spacing/2;
@@ -12,10 +12,10 @@
 
   &:hover {
     cursor: pointer;
-    background-color: $color-highlight;
+    background-color: $theme-light-secondary;
 
     &.addEatery {
-      background-color: darken($color-highlight, 20%);
+      background-color: darken($theme-light-secondary, 20%);
     }
   }
 
@@ -27,7 +27,7 @@
 }
 
 .addEatery {
-  background: $color-highlight;
+  background: $theme-light-secondary;
 }
 
 .hero-logo {

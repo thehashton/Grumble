@@ -1,4 +1,11 @@
+.toggle-container {
+	position: fixed;
+	top: $half-spacing/2;
+	right: $half-spacing/2;
+}
+
 .toggle-themeName {
+	display: none;
 	font-size: $medium-font-size;
 }
 

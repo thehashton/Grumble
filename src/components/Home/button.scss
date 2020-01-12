@@ -26,6 +26,15 @@
   }
 }
 
+.button {
+  &.food-types {
+    background: $theme-light-secondary;
+  }
+  &.random-choice {
+    background: $theme-light-secondary;
+  }
+}
+
 .addEatery {
   background: $theme-light-secondary;
 }

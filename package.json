@@ -13,8 +13,13 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "precommit": "lint-staged",
     "eslint:global": "eslint src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
-    "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
-    "pre-commit": "cmd && cmd"
+    "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix",
+      "pre-push": "npm run lint"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,tsx,json,css}": [

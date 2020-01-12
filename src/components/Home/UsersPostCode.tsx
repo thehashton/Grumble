@@ -30,7 +30,7 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
   const handleCrossEvent = () => {
     editSetState({ editingState: false });
     localStorage.removeItem("postCode");
-    location.reload();
+    window.location.reload();
   };
 
   const handleTickEvent = () => {
@@ -38,7 +38,7 @@ export const UsersPostCode: React.FC<UsersPostCodeProps> = props => {
 
     // Gives 5 seconds for lat/long to come back from postcodes.io API
     setTimeout(() => {
-      location.reload();
+      window.location.reload();
     }, 5000);
   };
 

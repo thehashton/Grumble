@@ -1,4 +1,5 @@
 import React from "react";
+
 import MapDirections from "../MapDirections";
 import "./EateryItem.scss";
 

@@ -1,7 +1,3 @@
-declare global {
-    interface navigator {}
-}
-
 export const getCurrentPosition = () => {
     navigator.geolocation.getCurrentPosition((e) => {
         localStorage.setItem("lat", e.coords.latitude.toString());

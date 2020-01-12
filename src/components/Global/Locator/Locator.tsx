@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Locator.scss";
 import getCurrentPosition from "../../../utils/getCurrentPosition";
 

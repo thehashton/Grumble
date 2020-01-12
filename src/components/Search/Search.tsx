@@ -1,7 +1,6 @@
 import React from "react";
 import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
-const algoliasearch = require("algoliasearch/lite");
 import {
   InstantSearch,
   Hits,
@@ -14,6 +13,8 @@ import {
 import { client } from "../..";
 import "./Search.scss";
 import { EateryItem } from "../../RootComponents/Eatery/EateryItem";
+
+const algoliasearch = require("algoliasearch/lite");
 
 const EATERY_QUERY = gql`
   {

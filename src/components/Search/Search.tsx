@@ -1,16 +1,13 @@
 import React from "react";
-import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
 import {
   InstantSearch,
   Hits,
-  Highlight,
   SearchBox,
   Configure,
   connectStateResults
 } from "react-instantsearch-dom";
 
-import { client } from "../..";
 import "./Search.scss";
 import { EateryItem } from "../../RootComponents/Eatery/EateryItem";
 

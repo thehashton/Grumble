@@ -9,6 +9,15 @@
 	top: $base-spacing*2;
 }
 
+body .darkmode-toggle,
+.darkmode-layer.darkmode-layer--button {
+	right: 5%;
+
+	@include media-query(min, $desk-start) {
+		right: 10%;
+	}
+}
+
 .darkmode-toggle {
 	z-index: 4;
 }

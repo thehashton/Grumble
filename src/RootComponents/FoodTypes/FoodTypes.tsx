@@ -3,9 +3,11 @@ import "./FoodTypes.scss";
 import { ApolloProvider, Query } from "react-apollo";
 import { gql } from "apollo-boost";
 import axios from "axios";
+
 import { getDistanceFromLatLonInKm } from "../../utils/distanceCalculator";
 import { client } from "../..";
 import { EateryItem } from "../Eatery/EateryItem";
+
 const uuidv4 = require("uuid/v4");
 
 export let eateryGlobalData = {};

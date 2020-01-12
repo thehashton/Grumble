@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, RefObject } from "react";
-const Darkmode = require("darkmode-js");
+
 import "./LightDarkToggle.scss";
+const Darkmode = require("darkmode-js");
 
 export const LightDarkToggle: React.FC = () => {
   const options = {

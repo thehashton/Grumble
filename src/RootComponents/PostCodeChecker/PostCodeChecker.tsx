@@ -1,6 +1,7 @@
 import React from "react";
 import "./PostCodeChecker.scss";
 import axios from "axios";
+
 import store from "../../../runtime/store/store";
 import { setPostCode } from "../../../runtime/store/actions";
 import Locator from "../../components/Global/Locator";
@@ -57,7 +58,7 @@ export const PostCodeChecker: React.FC = () => {
 
     // Gives 5 seconds for lat/long to come back from postcodes.io API
     setTimeout(() => {
-      location.reload();
+      window.location.reload();
     }, 3000);
   }
   return (

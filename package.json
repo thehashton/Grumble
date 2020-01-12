@@ -15,6 +15,12 @@
     "eslint:global": "eslint src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
     "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint:global:fix",
+      "pre-push": "npm run eslint:global:fix"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,tsx,json,css}": [
       "prettier --write",

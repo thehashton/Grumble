@@ -1,11 +1,13 @@
 import React from "react";
-import getGoogleDirections, { eateryMapUrlParam } from "./getGoogleDirections";
+
 import "./MapDirections.scss";
 import store from "../../../runtime/store/store";
 import {
   setEateryPostCode,
   setEateryAddress
 } from "../../../runtime/store/actions";
+
+import getGoogleDirections, { eateryMapUrlParam } from "./getGoogleDirections";
 const userPostCode = localStorage.getItem("postCode");
 
 type MapDirectionsProps = {

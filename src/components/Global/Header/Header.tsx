@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.scss";
 import { NavLink, Switch, Route } from "react-router-dom";
+
 import LightDarkToggle from "../LightDarkToggle";
 
 const Header = (props: any) => {

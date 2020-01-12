@@ -20,7 +20,7 @@
 
   @media (min-width: $lap-start) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     margin: auto;
   }
 }
@@ -92,10 +92,6 @@
 
 .menu__item {
   text-transform: lowercase;
-
-  @media only screen and (min-width: $lap-start) {
-    padding-right: $base-spacing;
-  }
 }
 
 .menu__link {
@@ -112,7 +108,8 @@
   }
 
   &:hover {
-    background-color: $color-highlight;
+    color: black;
+    background-color: $theme-light-secondary;
     box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.324);
   }
 }

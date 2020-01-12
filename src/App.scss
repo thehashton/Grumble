@@ -25,6 +25,7 @@ h1, h2, h3, h5, h6 {
 .container {
   width: 100%;
   padding-top: $base-spacing * 5;
+  z-index: 1;
   @media screen and (min-width: $lap-start) {
     padding-top: $base-spacing * 6;
   }

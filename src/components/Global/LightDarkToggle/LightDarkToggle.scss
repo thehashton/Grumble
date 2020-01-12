@@ -1,75 +1,14 @@
-.toggle-container {
-	position: absolute;
-	top: $half-spacing;
-	right: $base-spacing*2;
+.darkmode-layer {
+	background: $color-dark-grey !important;
+	mix-blend-mode: normal !important; //overriding DarkMode.js
+	z-index: 0;
 }
 
-.toggle-themeName {
-	display: none;
-	font-size: $medium-font-size;
+.darkmode-toggle,
+.darkmode-layer--button {
+	top: $base-spacing*2;
 }
 
-#switch[type=checkbox]{
-	height: 0;
-	width: 0;
-    visibility: hidden;
-}
-
-.switch-label {
-    cursor: pointer;
-	text-indent: -9999px;
-	width: 75px;
-	height: 25px;
-	background: grey;
-	display: block;
-	border-radius: $base-spacing * 5;
-    position: relative;
-}
-
-@include lightMode {
-    .switch-label {
-    border: 3px solid $color-white;
-    }
-}
-
-@include darkMode {
-    .switch-label {
-	border: 3px solid $color-base;
-
-		&:after {
-			background: $color-base;
-		}
-    }
-}
-
-.switch-label:after {
-	content: '';
-	position: absolute;
-	top: $half-spacing / 4;
-	left: $half-spacing / 2;
-	width: $base-spacing;
-	height: $base-spacing;
-	background: $color-white;
-	border-radius: 90px;
-	transition: 0.3s;
-}
-
-#switch:checked + .switch-label {
-	background: $color-primary-light;
-}
-
-#switch:checked + .switch-label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
-}
-
-.switch-label:active:after {
-	width: $base-spacing;
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms;
+.darkmode-toggle {
+	z-index: 4;
 }

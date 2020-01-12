@@ -13,7 +13,7 @@ body .darkmode-toggle,
 .darkmode-layer.darkmode-layer--button {
 	right: 5%;
 
-	@include media-query(min, $desk-start) {
+	@include media-query(min, $wide-start) {
 		right: 10%;
 	}
 }

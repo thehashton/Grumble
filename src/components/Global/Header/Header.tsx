@@ -14,7 +14,7 @@ const Header = (props: any) => {
           </NavLink>
         </div>
         <LightDarkToggle />
-        {/* <ul className={"menu"}>
+        <ul className={"menu"}>
           <li className={"menu__item"}>
             <NavLink
               exact
@@ -40,7 +40,7 @@ const Header = (props: any) => {
               Contact
             </NavLink>
           </li>
-        </ul> */}
+        </ul>
       </header>
     </div>
   );

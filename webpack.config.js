@@ -66,11 +66,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "dist", "index.html"),
-      filename: './index.html'
-    }),
-    new webpack.DefinePlugin(envKeys)
-  ]
+  plugins: [new HtmlWebpackPlugin()]
 };

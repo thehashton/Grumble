@@ -8,7 +8,6 @@
   width: 100%;
   position: fixed;
   min-height: 80px;
-  background-color: $color-dark-grey;
   top: 0;
   z-index: 3;
   max-width: 1200px;
@@ -17,6 +16,10 @@
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.darkmode--activated .darkmode-layer .header {
+  background-color: $color-dark-grey !important;
 }
 
 .logoText {
@@ -29,12 +32,6 @@
     display: block;
     content: "";
     border-bottom: 3px solid #ff8c00;
-  }
-}
-
-@include lightMode {
-  .header {
-    background-color: $theme-light-primary;
   }
 }
 

@@ -10,15 +10,11 @@
         position: relative;
         height: 66px;
         padding: $base-spacing;
-        top: -1px;
-        left: -5px;
-        border-top-right-radius: $half-spacing;
-        border-bottom-right-radius: $half-spacing;
         border: 2px solid $color-primary-light;
-        background: $color-primary-light;
+        background: $theme-light-secondary;
 
         &:hover {
-            background: $color-primary-light;
+            background: darken($theme-light-secondary, 5%);
             color: $color-base;
         }
     }

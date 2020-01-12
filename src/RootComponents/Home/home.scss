@@ -4,11 +4,12 @@
 }
 
 .Home {
+  display: inline-grid;
   padding-top: $base-spacing * 5;
+  width: 100%;
 
   @include media-query(min, $lap-start) {
     padding-top: $base-spacing * 2;
-
   }
 }
 

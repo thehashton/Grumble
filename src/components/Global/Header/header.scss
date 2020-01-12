@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: $theme-light-primary;
   align-items: center;
   justify-content: center;
   padding: $base-spacing;
@@ -18,7 +19,7 @@
   }
 }
 
-.darkmode--activated .darkmode-layer .header {
+.darkmode--activated .header {
   background-color: $color-dark-grey !important;
 }
 
@@ -26,7 +27,8 @@
   color: #fff;
   font-family: $serif;
   letter-spacing: -0.5px;
-  padding: 5px 20px;
+  padding: $half-spacing/2 $base-spacing;
+  margin: 0;
 
   &:after {
     display: block;
@@ -65,10 +67,6 @@
 
     &:hover {
       text-shadow: 6px 6px 2px $color-secondary-dark;
-    }
-
-    @media (min-width: $lap-start) {
-      margin: $half-spacing;
     }
   }
 

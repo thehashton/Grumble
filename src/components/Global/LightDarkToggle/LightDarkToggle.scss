@@ -21,3 +21,11 @@ body .darkmode-toggle,
 .darkmode-toggle {
 	z-index: 4;
 }
+
+body .darkmode-background {
+	background: $theme-light-primary;
+}
+
+.darkmode--activated .darkmode-background {
+	background: $color-primary;
+}

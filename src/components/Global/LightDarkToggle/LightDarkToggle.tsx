@@ -17,19 +17,12 @@ let trans = () => {
   }, 1000);
 };
 
-// const resetThemeToggle = (() => {
-// })()
-
 export const LightDarkToggle: React.FC = () => {
   let themeToggle: any = useRef(null);
   let themeToggleEle: Element = themeToggle.current;
 
   const [state, setState] = React.useState({
     currentTheme: "Light"
-  });
-
-  const [inputState, setInputState] = React.useState({
-    inputChecked: true
   });
 
   // Sets theme in local storage
@@ -58,30 +51,11 @@ export const LightDarkToggle: React.FC = () => {
     // Grabs input ref and focuses
     themeToggle.current.focus();
     themeToggleEle = themeToggle.current;
-    console.log(themeToggleEle);
-
-    // themeToggleEle.setAttribute("unchecked","unchecked");
-    // console.log(document.documentElement.getAttribute("data-theme") === "light");
-    // state.currentTheme === 'Light'? setInputState({ inputChecked: true }) : setInputState({ inputChecked: false });
   };
 
-  // const lol1 = () => {
-  //   new Darkmode().showWidget()
-  // }
-
-  // console.log(inputState.inputChecked);
-
-  // const lol = (() => {
-  //   if (document.documentElement.getAttribute("data-theme") === "light") {
-  //     themeToggleEle.setAttribute("Unchecked", "unchecked")
-  //   }  else {
-  //     themeToggleEle.setAttribute("checked","checked")
-  //   }
-  // })()
   const options = {
     label: "🌓"
   };
-  // {window.localStorage.getItem('theme') === 'Dark' ? themeToggleEle.setAttribute("Checked", "Checked") : console.log('lol')}
   return (
     <>
       <div className="toggle-container">

@@ -7,6 +7,11 @@
   top: 0;
   z-index: 3;
   background-color: $theme-light-primary;
+  transition-duration: 0.35s;
+}
+
+.darkmode--activated .headerWrapper {
+  background-color: $color-dark-grey;
 }
 
 .header {
@@ -17,6 +22,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  transition-duration: 0.35s;
   background-color: $theme-light-primary;
 
   @media (min-width: $lap-start) {

@@ -25,6 +25,20 @@ export default class Buttons extends Component {
       addEatery
     } = this.state;
 
+    const selectionState = (() => {
+      switch(foodTypesOpen || randomChoiceOpen || addEatery || travelToOpen) {
+        case true:
+          document.body.classList.add("selecting-eatery")
+          document.body.classList.remove("IDLE")
+          break;
+        case false:
+          document.body.classList.remove("selecting-eatery")
+          document.body.classList.add("IDLE")
+          break;
+        default:
+      }
+    })()
+
     return (
       <div
         className={`lowerOptions
@@ -35,13 +49,14 @@ export default class Buttons extends Component {
       }`}
       >
         <Button
-          onClick={() =>
-            this.setState({
-              foodTypesOpen: true,
-              randomChoiceOpen: false,
-              travelToOpen: false,
-              addEatery: false
-            })
+          onClick={() => {
+              this.setState({
+                foodTypesOpen: true,
+                randomChoiceOpen: false,
+                travelToOpen: false,
+                addEatery: false
+              })
+            }
           }
           className={`food-types ${foodTypesOpen ? `active` : ``}`}
           buttonText="Food Types"

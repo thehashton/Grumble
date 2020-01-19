@@ -22,6 +22,12 @@
   }
 }
 
+// Selecting eatery state
+.selecting-eatery .home-wrapper,
+.selecting-eatery .search {
+  display: none;
+}
+
 .buttons {
   margin-top: $base-spacing;
 }

@@ -108,6 +108,7 @@
   padding: 0 $base-spacing;
   color: $color-white;
   height: 80px;
+  max-height: $base-spacing * 2;
   @include font-size(18px);
 
   @media screen and (min-width: $lap-start) {

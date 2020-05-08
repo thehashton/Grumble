@@ -24,8 +24,7 @@ const EATERY_QUERY = gql`
   }
 `;
 
-const keys = require("../../../keys.json");
-const searchClient = algoliasearch(keys.id, keys.key);
+const searchClient = algoliasearch(process.env.ALGOLIA_ID, process.env.ALGOLIA_KEY);
 
 const fetchDataFromDatabase = () => {
   const eateries = EATERY_QUERY;

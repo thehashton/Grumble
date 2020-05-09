@@ -1,14 +1,14 @@
 const { ApolloServer } = require('apollo-server-lambda');
 
-const { typeDefs } = require('./lib/typeDefs');
-const { resolvers } =require('./lib/resolvers');
+const { typeDefs } = require('../../graphql/schema/types');
+const { resolvers } =require('../../graphql/schema/resolvers');
 
-const lambda = newApolloServer({
+const lambda = new ApolloServer({
   typeDefs,
   resolvers,
   playground: true,
   introspection: true
-);
+});
 
 exports.handler = lambda.createHandler({
   cors: {

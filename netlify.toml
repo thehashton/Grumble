@@ -1,8 +1,8 @@
 [build]
-command = "npm run build"
-functions = "built-lambda"
+command = "npm run build && npm run bundle"
+functions = "functions"
 base = ""
-publish = "dist"
+publish = "dist && functions"
 [[redirects]]
   from = "/*"
   to = "/index.html"

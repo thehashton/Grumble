@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "find a place to eat",
   "scripts": {
-    "server": "node ./src/graphql/index.js --experimental-modules",
+    "server": "node --experimental-modules ./src/graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
     "build": "webpack",
     "bundle": "cpx \"src/graphql/**/*\" \"functions/bundle\"",

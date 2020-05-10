@@ -9,6 +9,7 @@ const isAuth = require('../../middleware/is-auth');
 const typeDefs = require("./schema/types");
 const resolvers = require("./schema/resolvers");
 const app = express();
+require('@babel/polyfill/noConflict')
 
 app.use(bodyParser.json());
 

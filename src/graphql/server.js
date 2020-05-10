@@ -4,6 +4,8 @@ const { gql } = require('apollo-server-lambda');
 const typeDefs = require("./schema/types");
 const resolvers = require("./schema/resolvers");
 
+require('@babel/polyfill/noConflict');
+
 export const createLambdaServer = () => {
     return new ApolloServerLambda({
       typeDefs,

@@ -5,8 +5,8 @@
   "scripts": {
     "server": "node ./src/graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
-    "bundle": "cpx \"src\/graphql\/**\/*\" \"functions\/bundle\"",
     "build": "webpack && npm run bundle",
+    "bundle": "cpx \"src\/graphql\/**\/*\" \"functions\/bundle\"",
     "test": "react-scripts test",
     "jest": "jest",
     "jest:watch": "jest --watch",

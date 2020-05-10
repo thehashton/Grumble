@@ -5,7 +5,7 @@
   "scripts": {
     "server": "node ./src/graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
-    "build": "webpack && npm run bundle",
+    "build": "webpack",
     "bundle": "cpx \"src\/graphql\/**\/*\" \"functions\/bundle\"",
     "test": "react-scripts test",
     "jest": "jest",

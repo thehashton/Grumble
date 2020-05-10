@@ -1,5 +1,4 @@
 const ApolloServerLambda = require('apollo-server-lambda').ApolloServer;
-const { gql } = require('apollo-server-lambda');
 
 const typeDefs = require("./schema/types");
 const resolvers = require("./schema/resolvers");

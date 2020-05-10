@@ -1,4 +1,4 @@
-import { createLambdaServer } from './bundle/serve';
+const { createLambdaServer } = require('./bundle/serve');
 
 const server = createLambdaServer();
 

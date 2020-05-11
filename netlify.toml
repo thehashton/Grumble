@@ -1,5 +1,5 @@
 [build]
-command = "npm run build && npm run bundle && "
+command = "npm run build && npm run bundle && npm run lambda"
 base = ""
 functions = "functions"
 [[redirects]]

@@ -4,8 +4,7 @@ const { ApolloServer } = require("apollo-server-express");
 const mongoose = require("mongoose");
 const url = "mongodb://harry:Sophie777@ds052968.mlab.com:52968/lunch";
 
-const isAuth = require('../../middleware/is-auth');
-
+const isAuth = require('./middleware/is-auth');
 const typeDefs = require("./schema/types");
 const resolvers = require("./schema/resolvers");
 const app = express();

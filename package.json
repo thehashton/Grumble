@@ -15,7 +15,6 @@
     "precommit": "lint-staged",
     "eslint:global": "eslint src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
     "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
-    "lambda": "npm run build:lambda && npm run start:lambda",
     "start:lambda": "netlify-lambda serve src/graphql",
     "build:lambda": "netlify-lambda build src/graphql --config webpack.config.js"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "grumble-gql",
+  "name": "graphql-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-lambda": "^2.13.1",
-    "graphql": "^15.0.0"
+    "apollo-server-lambda": "2.10.0",
+    "graphql": "14.6.0"
   }
 }

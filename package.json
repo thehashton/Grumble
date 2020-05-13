@@ -15,8 +15,8 @@
     "precommit": "lint-staged",
     "eslint:global": "eslint src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
     "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
-    "start:lambda": "netlify-lambda serve functions/bundle",
-    "build:lambda": "netlify-lambda build functions/bundle --config webpack.config.js"
+    "start:lambda": "netlify-lambda serve src/graphql",
+    "build:lambda": "netlify-lambda build src/graphql --config webpack.config.js"
   },
   "husky": {
     "hooks": {

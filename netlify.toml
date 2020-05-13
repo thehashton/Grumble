@@ -1,6 +1,6 @@
 [build]
 command = "npm run build && npm run bundle && npm run build:lambda"
-base = "dist"
+base = ""
 functions = "functions"
 [[redirects]]
   from = "/*"

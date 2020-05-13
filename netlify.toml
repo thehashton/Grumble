@@ -1,7 +1,7 @@
 [build]
 command = "npm run build && npm run bundle && npm run build:lambda"
 base = "dist"
-functions = "functions/bundle"
+functions = "functions"
 [[redirects]]
   from = "/*"
   to = "/index.html"

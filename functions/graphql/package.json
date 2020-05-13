@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-lambda": "2.10.0",
-    "graphql": "14.6.0"
+    "graphql": "14.6.0",
+    "webpack": "^4.43.0"
   }
 }

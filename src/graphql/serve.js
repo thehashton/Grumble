@@ -3,7 +3,7 @@ const ApolloServerLambda = require('apollo-server-lambda').ApolloServer();
 const typeDefs = require("./schema/types");
 const resolvers = require("./schema/resolvers");
 
-export const createLambdaServer = () => {
+const createLambdaServer = () => {
     return new ApolloServerLambda({
       typeDefs,
       resolvers,
@@ -11,3 +11,5 @@ export const createLambdaServer = () => {
       playground: true,
     });
 }
+
+module.exports = createLambdaServer;

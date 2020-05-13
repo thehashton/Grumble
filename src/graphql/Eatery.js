@@ -89,4 +89,4 @@ const EaterySchema = new Schema({
 
 const Eatery = mongoose.model("Eatery", EaterySchema);
 
-export default Eatery;
+module.exports = Eatery;

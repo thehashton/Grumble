@@ -6,7 +6,7 @@
     "server": "node --experimental-modules ./src/graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
     "build": "webpack",
-    "bundle": "cpx \"src/graphql/**/*\" \"functions/bundle\"",
+    "bundle": "cpx \"src/graphql/**/*\" \"functions/graphql\"",
     "test": "react-scripts test",
     "jest": "jest",
     "jest:watch": "jest --watch",

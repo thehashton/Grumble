@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "find a place to eat",
   "scripts": {
-    "server": "node --experimental-modules ./src/lambda/index.js",
+    "server": "node --experimental-modules ./src/graphql/index.js",
     "start": "HTTPS=true webpack-dev-server --mode development --open --hot",
     "build": "webpack",
-    "bundle": "cpx \"src/lambda/**/*\" \"functions/bundle\"",
+    "bundle": "cpx \"src/graphql/**/*\" \"functions/bundle\"",
     "test": "react-scripts test",
     "jest": "jest",
     "jest:watch": "jest --watch",
@@ -15,8 +15,8 @@
     "precommit": "lint-staged",
     "eslint:global": "eslint src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
     "eslint:global:fix": "eslint --fix src -c src/.eslintrc.js --ext .js,.jsx,.tsx,.ts",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build:lambda": "netlify-lambda build src/lambda --config webpack.config.js"
+    "start:lambda": "netlify-lambda serve src/graphql",
+    "build:lambda": "netlify-lambda build src/graphql --config webpack.config.js"
   },
   "husky": {
     "hooks": {

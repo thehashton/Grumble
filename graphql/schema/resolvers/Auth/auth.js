@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const User = require('../../Types/user');
+const User = require('../../types/User');
 
 module.exports = {
   createUser: async args => {

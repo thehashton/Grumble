@@ -34,7 +34,8 @@
     display: flex;
 }
 
-.UsersPostCode__tick, .UsersPostCode__cross {
+.UsersPostCode__tick, 
+.UsersPostCode__cross {
     display: none;
     align-items: center;
     justify-content: center;

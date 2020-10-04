@@ -60,6 +60,7 @@ function rules(themePaths, selectMode, selectTarget) {
                         @import "_mixins";
                         @import "_normalize";
                         @import "_reset";
+                        @import "_fonts";
                         `,
                         includePaths: ['src/scss'],
                     },

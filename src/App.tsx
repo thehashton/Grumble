@@ -3,11 +3,11 @@ import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import Home from "./RootComponents/Home";
+import Home from "./pages/Home";
 import Header from "./components/Global/Header";
-import About from "./RootComponents/About";
-import FAQ from "./RootComponents/FAQ";
-import Contact from "./RootComponents/Contact";
+import About from "./pages/About";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 import { AuthPage } from "./pages/AuthPage/AuthPage";
 import WrongRoute from "./components/WrongRoute";
 

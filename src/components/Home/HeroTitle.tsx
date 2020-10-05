@@ -5,7 +5,7 @@ import "./HeroTitle.scss";
 import UsersPostCode from "./UsersPostCode";
 
 export const HeroTitle: React.SFC = () => {
-  var msgArr = [];
+  const msgArr = [];
 
   msgArr[0] = "Hungry?";
   msgArr[1] = "Famished?";

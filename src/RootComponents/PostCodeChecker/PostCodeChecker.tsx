@@ -22,7 +22,7 @@ export const PostCodeChecker: React.FC = () => {
     setState({ userPostCode: evt.target.value });
   }
 
-  let userLocObj: any = {};
+  const userLocObj: any = {};
 
   axios
     .get("https://api.postcodes.io/postcodes/" + state.userPostCode)

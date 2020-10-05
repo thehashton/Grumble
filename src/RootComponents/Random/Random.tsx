@@ -27,7 +27,7 @@ const EATERY_QUERY = gql`
 export const Random: React.SFC = () => {
   const usersLatitude = localStorage.getItem("lat");
   const usersLongitude = localStorage.getItem("long");
-  let eateriesData: any = {};
+  const eateriesData: any = {};
 
   return (
     <div className="random">
@@ -37,7 +37,7 @@ export const Random: React.SFC = () => {
             if (loading) return "Loading...";
             const { eateries } = data;
             const randomItem = function(obj: any) {
-              var keys = Object.keys(obj);
+              const keys = Object.keys(obj);
               return obj[keys[(keys.length * Math.random()) << 0]];
             };
             const randomEatery = randomItem(eateries);
@@ -65,7 +65,7 @@ export const Random: React.SFC = () => {
                 Object.assign(eateriesData, eateryLocationRes);
 
                 // Calculates distance between user and eatery
-                let eateryDistance = (
+                const eateryDistance = (
                   getDistanceFromLatLonInKm(
                     Number(usersLatitude),
                     Number(usersLongitude),

@@ -12,7 +12,7 @@ const uuidv4 = require("uuid/v4");
 
 export let eateryGlobalData = {};
 
-export let eateriesData: any = {};
+export const eateriesData: any = {};
 
 const EATERY_QUERY = gql`
   {
@@ -130,7 +130,7 @@ export const FoodTypes: React.FC = () => {
                     Object.assign(eateriesData, eateryLocationRes);
 
                     // Calculates distance between user and eatery
-                    let eateryDistance =
+                    const eateryDistance =
                       getDistanceFromLatLonInKm(
                         Number(usersLatitude),
                         Number(usersLongitude),

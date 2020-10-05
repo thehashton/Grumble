@@ -1,8 +1,8 @@
 let date: any = new Date(Date.now() + 86400e3);
 
 export const getCookie = (name: any) => {
-    var re = new RegExp(name + "=([^;]+)");
-    var value = re.exec(document.cookie);
+    const re = new RegExp(name + "=([^;]+)");
+    const value = re.exec(document.cookie);
     return (value != null) ? unescape(value[1]) : null;
 }
 

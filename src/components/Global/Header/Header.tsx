@@ -40,6 +40,11 @@ const Header = (props: any) => {
               Contact
             </NavLink>
           </li>
+          <li className={"menu__item"}>
+            <NavLink to="/news" className={"menu__link"}>
+              News
+            </NavLink>
+          </li>
         </ul>
       </header>
     </div>

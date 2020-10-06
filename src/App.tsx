@@ -10,6 +10,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import { AuthPage } from "./pages/AuthPage/AuthPage";
 import WrongRoute from "./components/WrongRoute";
+import News from "./pages/News";
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
                         <Route path="/account" component={AuthPage} />
                         <Route path="/faq" component={FAQ} />
                         <Route path="/contact" component={Contact} />
+                        <Route path="/news" component={News} />
                         <Route component={WrongRoute} />
                       </Switch>
                     </CSSTransition>

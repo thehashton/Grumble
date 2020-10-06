@@ -11,7 +11,7 @@ https://eat.netlify.com/
 Run the following to start the project
 
 ```
-cb start
+npm start
 ```
 ## Storybook
 To run Storybook
@@ -23,9 +23,6 @@ npm run storybook
 To build it use
 
 ```
-cb build
+npm run build
 ```
-
-### GraphQL
-To view the graphql endpoint run `cb graphql` and go to `localhost:4000/graphql` which will open up apollo playground.
 

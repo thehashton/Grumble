@@ -12,17 +12,28 @@ type Post = {
 	slug: string;
 }
 
-async function getPosts() {
-	const res = await fetch(
-		`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`
-	).then((res) => res.json())
-	const posts = res.posts
-	return posts
+const getPosts = async () => {
+	const res = fetch(`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`)
+	.then(response => response.json())
+	.then(data => console.log(data));
+	const posts = res;
+	console.log(typeof(posts));
+	return res;
 }
+
+getPosts();
+
+// async function getPosts() {
+// 	const res = await fetch(
+// 		`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`
+// 	).then((res) => res.json())
+// 	const posts = res.posts
+// 	return posts
+// }
 
 export const getStaticProps = async ({ params }: any) => {
 	const posts = await getPosts()
-
+	
 	return {
 		revalidate: 10,
 		props: { posts }
@@ -35,7 +46,8 @@ const News: React.FC<{ posts: Post[] }> = (props) => {
 		<div className={css.container}>
 			<h1>Hello to my blog</h1>
 			<ul>
-				{posts.map((post: any, index: any) => {
+				<li>{posts}</li>
+				{/* {posts.map((post: any, index: any) => {
 					return (
 						<li className={css.postitem} key={post.slug}>
 							<Link href="/post/[slug]" as={`/post/${post.slug}`}>
@@ -43,7 +55,7 @@ const News: React.FC<{ posts: Post[] }> = (props) => {
 							</Link>
 						</li>
 					)
-				})}
+				})} */}
 			</ul>
 		</div>
 	)

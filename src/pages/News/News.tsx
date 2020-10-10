@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import css from './news.scss';
+import './news.scss';
 
 const CONTENT_API_KEY = "8c0c4c2709b45b07810bd87910";
 const BLOG_URL = "https://grumbleblog.herokuapp.com";
@@ -30,9 +30,9 @@ const content: any = blogContent;
   console.log(content);
 
 	return (
-		<div className={css.container}>
+		<div className="News">
 			<h1>Hello to my blog</h1>
-			<ul>
+			<ul className="postList">
 			{content ? 
 			content.posts.map((post: any) =>  (
 				<li key={post.slug}>

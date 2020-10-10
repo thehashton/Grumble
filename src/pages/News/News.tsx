@@ -25,17 +25,7 @@ useEffect(() => {
 		getBlogContent(await res);
 	})()
  }, [])
-const content:any = blogContent;
-
-const convertArrayToObject = (array: any, key: any) => {
-	const initialValue = {};
-	return array.reduce((obj: any, item: any) => {
-	  return {
-		...obj,
-		[item[key]]: item,
-	  };
-	}, initialValue);
-  };
+const content: any = blogContent;
 
   console.log(content);
 

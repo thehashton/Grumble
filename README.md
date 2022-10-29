@@ -5,7 +5,7 @@
 </p>
 
 **Visit the demo**
-https://eat.netlify.com/
+https://eat.netlify.com
 
 
 Run the following to start the project
